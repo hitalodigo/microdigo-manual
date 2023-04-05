@@ -1,3 +1,5 @@
+import imgHeader from '../../assets/images/header.png';
+
 import {
     Row,
     Title,
@@ -30,7 +32,7 @@ function HeaderContent() {
                         width="540"
                         height="35"
                     >
-                        <img src="src/assets/images/header.png" alt="Imagem do cabeçalho" loading="lazy" />
+                        <img src={imgHeader} alt="Imagem do cabeçalho" loading="lazy" />
                         <span className="legend">Cabeçalho</span>
                     </ImageContainer>
 

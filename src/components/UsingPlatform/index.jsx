@@ -1,3 +1,19 @@
+import imgSelectComponenteEntrada from '../../assets/images/selecionando-componente-entrada.png';
+import imgComponenteEntradaArrastando from '../../assets/images/componente-entrada-arrastando.png';
+import imgCriandoConexao1 from '../../assets/images/criando-conexao1.png';
+import imgCriandoConexao2 from '../../assets/images/criando-conexao2.png';
+import imgCriandoConexao3 from '../../assets/images/criando-conexao3.png';
+import imgHabilitandoBtnExcluir from '../../assets/images/habilitando-botao-excluir-linha.png';
+import imgExcluirArrastando from '../../assets/images/excluir-arrastando.png';
+import imgExcluirBtnAction from '../../assets/images/excluir-botao-action.png';
+import imgConfirmExclusion from '../../assets/images/confirm-exclusion.png';
+import imgCriandoFluxos1 from '../../assets/images/criando-fluxos1.png';
+import imgCriandoFluxos2 from '../../assets/images/criando-fluxos2.png';
+import imgManuseandoFluxos1 from '../../assets/images/manuseando-fluxos1.png';
+import imgManuseandoFluxos2 from '../../assets/images/manuseando-fluxos2.png';
+import imgForm from '../../assets/images/formulario-registro.png';
+import imgFormPreenchido from '../../assets/images/formulario-registro-preenchido.png';
+
 import {
     ImageContainer,
     ListItem,
@@ -33,7 +49,7 @@ function UsingPlatform() {
                                 width='146'
                                 height='290'
                             >
-                                <img src="src/assets/images/selecionando-componente-entrada.png" alt="Imagem 1 do passo a passo para selecionar componente de entrada" loading="lazy" />
+                                <img src={imgSelectComponenteEntrada} alt="Imagem 1 do passo a passo para selecionar componente de entrada" loading="lazy" />
                                 <span className="legend">Seção componentes de entrada selecionada</span>
                             </ImageContainer>
                             <Paragraph>
@@ -44,7 +60,7 @@ function UsingPlatform() {
                                 width='190'
                                 height='190'
                             >
-                                <img src="src/assets/images/componente-entrada-arrastando.png" alt="Potenciômetro sendo arrastado" loading="lazy" />
+                                <img src={imgComponenteEntradaArrastando} alt="Potenciômetro sendo arrastado" loading="lazy" />
                                 <span className="legend">"Potenciômetro" sendo arrastado para o painel de montagem</span>
                             </ImageContainer>
                         </Row>
@@ -63,7 +79,7 @@ function UsingPlatform() {
                                 width='375'
                                 height='160'
                             >
-                                <img src="src/assets/images/criando-conexao1.png" alt="Potenciometro e condicional E no painel de montagem" loading="lazy" />
+                                <img src={imgCriandoConexao1} alt="Potenciometro e condicional E no painel de montagem" loading="lazy" />
                                 <span className="legend">Potenciômetro e condicional E no painel de montagem</span>
                             </ImageContainer>
 
@@ -75,7 +91,7 @@ function UsingPlatform() {
                                 width='370'
                                 height='160'
                             >
-                                <img src="src/assets/images/criando-conexao2.png" alt="Criação da linha de conexão entre potenciometro e componente E" loading="lazy" />
+                                <img src={imgCriandoConexao2} alt="Criação da linha de conexão entre potenciometro e componente E" loading="lazy" />
                                 <span className="legend">Interação com conector à direita do Potenciômetro criando uma linha de conexão</span>
                             </ImageContainer>
 
@@ -87,7 +103,7 @@ function UsingPlatform() {
                                 width='370'
                                 height='160'
                             >
-                                <img src="src/assets/images/criando-conexao3.png" alt="Criação da linha finalizada" loading="lazy" />
+                                <img src={imgCriandoConexao3} alt="Criação da linha finalizada" loading="lazy" />
                                 <span className="legend">Conexão entre dois componentes criada</span>
                             </ImageContainer>
                         </Row>
@@ -106,7 +122,7 @@ function UsingPlatform() {
                                 width='370'
                                 height='160'
                             >
-                                <img src="src/assets/images/habilitando-botao-excluir-linha.png" alt="Habilitando botão de excluir linha" loading="lazy" />
+                                <img src={imgHabilitandoBtnExcluir} alt="Habilitando botão de excluir linha" loading="lazy" />
                                 <span className="legend">Botão de exclusão apareceu sobre linha amarela</span>
                             </ImageContainer>
 
@@ -120,7 +136,7 @@ function UsingPlatform() {
                                 width='204'
                                 height='270'
                             >
-                                <img src="src/assets/images/excluir-arrastando.png" alt="Excluir componente através do arraste" loading="lazy" />
+                                <img src={imgExcluirArrastando} alt="Excluir componente através do arraste" loading="lazy" />
                                 <span className="legend">Potenciômetro sendo excluído através da barra lateral</span>
                             </ImageContainer>
 
@@ -132,7 +148,7 @@ function UsingPlatform() {
                                 width='215'
                                 height='200'
                             >
-                                <img src="src/assets/images/excluir-botao-action.png" alt="Excluir componente através do botão action" loading="lazy" />
+                                <img src={imgExcluirBtnAction} alt="Excluir componente através do botão action" loading="lazy" />
                                 <span className="legend">Potenciômetro sendo excluído através do botão de exclusão</span>
                             </ImageContainer>
 
@@ -144,7 +160,7 @@ function UsingPlatform() {
                                 width='291'
                                 height='220'
                             >
-                                <img src="src/assets/images/confirm-exclusion.png" alt="Confirmar exclusão do componente através de pop-up" loading="lazy" />
+                                <img src={imgConfirmExclusion} alt="Confirmar exclusão do componente através de pop-up" loading="lazy" />
                                 <span className="legend">Potenciômetro sendo excluído do painel de montagem</span>
                             </ImageContainer>
                         </Row>
@@ -165,7 +181,7 @@ function UsingPlatform() {
                                 width='291'
                                 height='220'
                             >
-                                <img src="src/assets/images/criando-fluxos1.png" alt="Criando fluxos maiores" loading="lazy" />
+                                <img src={imgCriandoFluxos1} alt="Criando fluxos maiores" loading="lazy" />
                                 <span className="legend">Sensor de luz, sensor de temperatura, condicionais E e OU e LED adicionados ao painel de montagem. </span>
                             </ImageContainer>
 
@@ -177,7 +193,7 @@ function UsingPlatform() {
                                 width='291'
                                 height='220'
                             >
-                                <img src="src/assets/images/criando-fluxos2.png" alt="Criacao de fluxo finalizada" loading="lazy" />
+                                <img src={imgCriandoFluxos2} alt="Criacao de fluxo finalizada" loading="lazy" />
                                 <span className="legend">Fluxo criado</span>
                             </ImageContainer>
                         </Row>
@@ -197,7 +213,7 @@ function UsingPlatform() {
                                 width='468'
                                 height='180'
                             >
-                                <img src="src/assets/images/manuseando-fluxos1.png" alt="Alterando valor do componente" loading="lazy" />
+                                <img src={imgManuseandoFluxos1} alt="Alterando valor do componente" loading="lazy" />
                                 <span className="legend">Sensor de luz recebendo valor 0 / Sensor de luz recebendo valor 50</span>
                             </ImageContainer>
 
@@ -205,7 +221,7 @@ function UsingPlatform() {
                                 width='515'
                                 height='130'
                             >
-                                <img src="src/assets/images/manuseando-fluxos2.png" alt="Alterando valor do componente" loading="lazy" />
+                                <img src={imgManuseandoFluxos2} alt="Alterando valor do componente" loading="lazy" />
                                 <span className="legend">Componente de entrada sensor de luz, ao ter o valor modificado, faz componente de saída LED acender</span>
                             </ImageContainer>
                         </Row>
@@ -225,7 +241,7 @@ function UsingPlatform() {
                                 width='273'
                                 height='318'
                             >
-                                <img src="src/assets/images/formulario-registro.png" alt="Formulario para registro de dispostivo físico, não preenchido" loading="lazy" />
+                                <img src={imgForm} alt="Formulario para registro de dispostivo físico, não preenchido" loading="lazy" />
                                 <span className="legend">Formulário para registro de dispositivo físico</span>
                             </ImageContainer>
 
@@ -237,7 +253,7 @@ function UsingPlatform() {
                                 width='283'
                                 height='350'
                             >
-                                <img src="src/assets/images/formulario-registro-preenchido.png" alt="Formulario para registro de dispostivo físico, preenchido" loading="lazy" />
+                                <img src={imgFormPreenchido} alt="Formulario para registro de dispostivo físico, preenchido" loading="lazy" />
                                 <span className="legend">Formulário preenchido para registro de dispositivo físico</span>
                             </ImageContainer>
                         </Row>

@@ -1,3 +1,11 @@
+import imgPainelMontagem from '../../assets/images/painel-montagem.png';
+import imgExemploFluxo from '../../assets/images/exemplo-fluxo.png';
+import imgConectoresConexoes from '../../assets/images/conectores-conexoes.png';
+import imgBotaoZoom from '../../assets/images/botao-zoom.png';
+import imgZoomInOut from '../../assets/images/zoom-in-out.png';
+import imgBotaoFaq from '../../assets/images/botao-faq.png';
+
+
 import {
     ImageContainer,
     OrderList,
@@ -30,7 +38,7 @@ function MoutingPanelContent() {
                     height='260'
                 >
                     <img
-                        src="src/assets/images/painel-montagem.png"
+                        src={imgPainelMontagem}
                         alt="Ilustação do painel de montagem"
                         loading="lazy"
                     />
@@ -52,7 +60,7 @@ function MoutingPanelContent() {
                                 height='200'
                             >
                                 <img
-                                    src="src/assets/images/exemplo-fluxo.png"
+                                    src={imgExemploFluxo}
                                     alt="Ilustação do painel de montagem"
                                     loading="lazy"
                                 />
@@ -75,7 +83,7 @@ function MoutingPanelContent() {
                                             height='180'
                                         >
                                             <img
-                                                src="src/assets/images/conectores-conexoes.png"
+                                                src={imgConectoresConexoes}
                                                 alt="Ilustação da representação dos conectores e conexoes"
                                                 loading="lazy"
                                             />
@@ -103,7 +111,7 @@ function MoutingPanelContent() {
                                     height='83'
                                 >
                                     <img
-                                        src="src/assets/images/botao-zoom.png"
+                                        src={imgBotaoZoom}
                                         alt="Ilustação do botao de zoom"
                                         loading="lazy"
                                         title="Botão de zoom"
@@ -117,7 +125,7 @@ function MoutingPanelContent() {
                                     height='280'
                                 >
                                     <img
-                                        src="src/assets/images/zoom-in-out.png"
+                                        src={imgZoomInOut}
                                         alt="Ilustação do zoom in"
                                         loading="lazy"
                                         title="Zoom in"
@@ -144,7 +152,7 @@ function MoutingPanelContent() {
                                 height='90'
                             >
                                 <img
-                                    src="src/assets/images/botao-faq.png"
+                                    src={imgBotaoFaq}
                                     alt="Ilustação do botão de faq"
                                     loading="lazy"
                                     title="Botão de faq"

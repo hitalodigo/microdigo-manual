@@ -1,5 +1,6 @@
-
 import { useState } from 'react';
+
+import imgLogo from './assets/images/logo.png';
 
 import GlobalStyles from './styles/global';
 
@@ -23,7 +24,7 @@ function App() {
         <Sidebar>
           <LogoContainer>
             <img
-              src="src/assets/images/logo.png"
+              src={imgLogo}
               alt="logo da digomaker"
               loading='lazy'
             />

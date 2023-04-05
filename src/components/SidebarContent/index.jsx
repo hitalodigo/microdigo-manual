@@ -1,3 +1,9 @@
+import imgBarraLateral from '../../assets/images/barra-lateral.png';
+import imgMenuBtnEntradas from '../../assets/images/menu-btn-entradas.png';
+import imgMenuBtnSaidas from '../../assets/images/menu-btn-saidas.png';
+import imgMenuBtnCondicionais from '../../assets/images/menu-btn-condicionais.png';
+import imgMenuBtnFisicos from '../../assets/images/menu-btn-fisicos.png';
+
 import { ImageContainer, ListItem, OrderList, Paragraph, Row, Title } from "../../styles/common";
 import { SidebarContainer, SidebarContentHeader, SidebarContentSection } from "./styles";
 
@@ -20,7 +26,7 @@ function SidebarContent() {
                     width='310'
                     height='315'
                 >
-                    <img src="src/assets/images/barra-lateral.png" alt="Imagem do cabeçalho" loading="lazy" />
+                    <img src={imgBarraLateral} alt="Imagem do cabeçalho" loading="lazy" />
                     <span className="legend">
                         Identificação de cada elemento presente na barra lateral.
                     </span>
@@ -57,7 +63,7 @@ function SidebarContent() {
                                     width='75'
                                     height='100'
                                 >
-                                    <img src="src/assets/images/menu-btn-entradas.png" alt="Botão para componentes de entrada" loading="lazy" />
+                                    <img src={imgMenuBtnEntradas} alt="Botão para componentes de entrada" loading="lazy" />
                                     <span className="legend">Botão de entradas</span>
                                 </ImageContainer>
                             </Row>
@@ -75,7 +81,7 @@ function SidebarContent() {
                                     width='75'
                                     height='100'
                                 >
-                                    <img src="src/assets/images/menu-btn-saidas.png" alt="Botão para dispositivos de saida" loading="lazy" />
+                                    <img src={imgMenuBtnSaidas} alt="Botão para dispositivos de saida" loading="lazy" />
                                     <span className="legend">Botão de saídas</span>
                                 </ImageContainer>
                             </Row>
@@ -93,7 +99,7 @@ function SidebarContent() {
                                     width='75'
                                     height='100'
                                 >
-                                    <img src="src/assets/images/menu-btn-condicionais.png" alt="Botão para dispositivos condicionais" loading="lazy" />
+                                    <img src={imgMenuBtnCondicionais} alt="Botão para dispositivos condicionais" loading="lazy" />
                                     <span className="legend">Botão de condicionais</span>
                                 </ImageContainer>
                             </Row>
@@ -112,7 +118,7 @@ function SidebarContent() {
                                     width='75'
                                     height='100'
                                 >
-                                    <img src="src/assets/images/menu-btn-fisicos.png" alt="Botão para dispositivos condicionais" loading="lazy" />
+                                    <img src={imgMenuBtnFisicos} alt="Botão para dispositivos condicionais" loading="lazy" />
                                     <span className="legend">Botão dos físicos</span>
                                 </ImageContainer>
                             </Row>
