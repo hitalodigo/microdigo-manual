@@ -7,7 +7,7 @@ const HomeContainer = styled.section`
 `
 const HomeHeader = styled.header``
 
-const HomeSection = styled.div`
+const HomeContent = styled.section`
   display: flex;
   flex-direction: column;
   gap: 3.2rem;
@@ -41,7 +41,7 @@ const YouWillLearnContainer = styled.div`
 
 export {
   HomeContainer,
-  HomeSection,
+  HomeContent,
   HomeHeader,
   YouWillLearnContainer
 }

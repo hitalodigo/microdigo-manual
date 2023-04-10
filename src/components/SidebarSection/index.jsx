@@ -2,25 +2,25 @@ import imgBarraLateral from '../../assets/images/barra-lateral.png';
 import imgMenuBtnEntradas from '../../assets/images/menu-btn-entradas.png';
 import imgMenuBtnSaidas from '../../assets/images/menu-btn-saidas.png';
 import imgMenuBtnCondicionais from '../../assets/images/menu-btn-condicionais.png';
-import imgMenuBtnFisicos from '../../assets/images/menu-btn-fisicos.png';
+import imgMenuBtnEventos from '../../assets/images/menu-btn-eventos.png';
 
 import { ImageContainer, ListItem, OrderList, Paragraph, Row, Title } from "../../styles/common";
-import { SidebarContainer, SidebarContentHeader, SidebarContentSection } from "./styles";
+import { SidebarContainer, SidebarHeader, SidebarContent } from "./styles";
 
-function SidebarContent() {
+function SidebarSection() {
 
 
     return (
-        <SidebarContainer>
-            <SidebarContentHeader>
+        <SidebarContainer id='sidebar-section'>
+            <SidebarHeader>
                 <Title
                     size='40'
                 >
                     Barra lateral
                 </Title>
-            </SidebarContentHeader>
+            </SidebarHeader>
 
-            <SidebarContentSection>
+            <SidebarContent>
                 <Paragraph size='16'>A barra lateral, encontrada na esquerda da tela, é dividida em duas colunas: a primeira, onde será possível selecionar o tipo do componente por meio de botões; a segunda, onde irá aparecer uma série de elementos ligados ao tipo escolhido, os quais podem ser arrastados para a área mais clara, chamada painel de montagem.</ Paragraph>
                 <ImageContainer
                     width='310'
@@ -109,28 +109,27 @@ function SidebarContent() {
                             <Row
                                 gap='12'
                             >
-                                <Title size='20'>Físicos</Title>
+                                <Title size='20'>Eventos</Title>
                                 <Paragraph size='16'>
-                                    Selecionando esta opção serão apresentados os componentes físicos, também chamados de endpoint’s; tais elementos podem variar entre componentes de entrada e saída e serão aqueles que têm seu correspondente físico, podendo ser manuseado e, por meio da plataforma, interagem com outros componentes, sendo esses virtuais ou não.
-
+                                    Selecionando esta opção serão apresentados os componentes de evento, esses componentes, assim como as condicionais, também são encontrados no ambiente virtual. São dos mais variados tipos, recebendo e passando determinada informação em conjunto à um evento, podem, por exemplo, mudar a cor de um led RGB ou esperar uma certa quantidade de segundos antes de transmitir o dado.
                                 </ Paragraph>
                                 <ImageContainer
                                     width='75'
                                     height='100'
                                 >
-                                    <img src={imgMenuBtnFisicos} alt="Botão para dispositivos condicionais" loading="lazy" />
-                                    <span className="legend">Botão dos físicos</span>
+                                    <img src={imgMenuBtnEventos} alt="Botão para dispositivos condicionais" loading="lazy" />
+                                    <span className="legend">Botão de eventos</span>
                                 </ImageContainer>
                             </Row>
                         </ListItem>
                     </OrderList>
 
                 </Row>
-            </SidebarContentSection>
+            </SidebarContent>
 
 
         </SidebarContainer>
     )
 }
 
-export default SidebarContent;
+export default SidebarSection;

@@ -18,19 +18,19 @@ import {
 import {
     MoutingPanelContainer,
     MoutingPanelHeader,
-    MoutingPanelSection
+    MoutingPanelContent
 } from "./styles";
 
 
-function MoutingPanelContent() {
+function MoutingPanelSection() {
 
     return (
-        <MoutingPanelContainer>
+        <MoutingPanelContainer id='mouting-panel-section'>
             <MoutingPanelHeader>
                 <Title size='40'>Painel de montagem</Title>
             </MoutingPanelHeader>
 
-            <MoutingPanelSection>
+            <MoutingPanelContent>
                 <Paragraph size='16'>Esta é a área onde serão criados os fluxos. </ Paragraph>
 
                 <ImageContainer
@@ -163,9 +163,9 @@ function MoutingPanelContent() {
                     </ListItem>
                 </OrderList>
 
-            </MoutingPanelSection>
+            </MoutingPanelContent>
         </MoutingPanelContainer>
     )
 }
 
-export default MoutingPanelContent;
+export default MoutingPanelSection;

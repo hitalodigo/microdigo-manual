@@ -7,10 +7,10 @@ const HeaderContainer = styled.section`
 `
 const Header = styled.header``
 
-const HeaderSection = styled.div``
+const HeaderContent = styled.section``
 
 export {
     HeaderContainer,
     Header,
-    HeaderSection
+    HeaderContent
 }

@@ -1,19 +1,17 @@
-import { useState } from 'react';
 
 import GlobalStyles from './styles/global';
 
-import SidebarContent from './components/SidebarContent';
-import HeaderContent from './components/HeaderContent';
-import MoutingPanelContent from './components/MoutingPainelContent';
+import SidebarContent from './components/SidebarSection';
+import MoutingPanelSection from './components/MoutingPainelSection';
+import HomeSection from './components/HomeSection';
+import HeaderSection from './components/HeaderSection';
+import UsingPlatformSection from './components/UsingPlatformSection';
 
-import { Container, Content, Sidebar } from './styles/app-styles'
-import HomeContent from './components/HomeContent';
-import UsingPlatform from './components/UsingPlatform';
 import Header from './components/Header';
 
-function App() {
+import { Container, Content } from './styles/app-styles';
 
-  const [currentSection, setCurrentSection] = useState('home');
+function App() {
 
   return (
     <>
@@ -22,59 +20,19 @@ function App() {
       <Container>
 
         <Header />
-        {/* <Sidebar>
-          <LogoContainer>
-            <img
-              src={imgLogo}
-              alt="logo da digomaker"
-              loading='lazy'
-            />
-          </LogoContainer>
-          <MenuList>
-            <MenuItem
-              linkActive={currentSection === 'home'}
-              onClick={() => setCurrentSection('home')}
-            >
-              Página inicial
-            </MenuItem>
-            <MenuItem
-              linkActive={currentSection === 'header'}
-              onClick={() => setCurrentSection('header')}
-            >
-              Cabeçalho
-            </MenuItem>
-            <MenuItem
-              linkActive={currentSection === 'sidebar'}
-              onClick={() => setCurrentSection('sidebar')}
-            >
-              Barra lateral
-            </MenuItem>
-            <MenuItem
-              linkActive={currentSection === 'mounting-panel'}
-              onClick={() => setCurrentSection('mounting-panel')}
-            >
-              Painel de montagem
-            </MenuItem>
-            <MenuItem
-              linkActive={currentSection === 'using-platform'}
-              onClick={() => setCurrentSection('using-platform')}
-            >
-              Usando plataforma
-            </MenuItem>
-          </MenuList>
-        </Sidebar>
+
         <Content>
-          {currentSection === 'home' && <HomeContent />}
+          <HomeSection />
 
-          {currentSection === 'header' && <HeaderContent />}
+          <HeaderSection />
 
-          {currentSection === 'sidebar' && <SidebarContent />}
+          <SidebarContent />
 
-          {currentSection === 'mounting-panel' && <MoutingPanelContent />}
+          <MoutingPanelSection />
 
-          {currentSection === 'using-platform' && <UsingPlatform />}
+          <UsingPlatformSection />
 
-        </Content> */}
+        </Content>
       </Container>
     </>
   )

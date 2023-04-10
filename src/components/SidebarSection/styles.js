@@ -6,9 +6,9 @@ const SidebarContainer = styled.div`
     gap: 1.2rem;
 `
 
-const SidebarContentHeader = styled.header``
+const SidebarHeader = styled.header``
 
-const SidebarContentSection = styled.section`
+const SidebarContent = styled.section`
     display: flex;
     flex-direction: column;
     gap: 3.2rem;
@@ -16,6 +16,6 @@ const SidebarContentSection = styled.section`
 
 export {
     SidebarContainer,
-    SidebarContentHeader,
-    SidebarContentSection
+    SidebarHeader,
+    SidebarContent
 }

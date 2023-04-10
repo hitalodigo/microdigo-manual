@@ -8,30 +8,32 @@ const Container = styled.main`
   display: flex;
 `
 
-const Content = styled.div`
+const Content = styled.article`
   width: 100%;
-  padding: 2.4rem 6.4rem;
-  overflow-y: auto;
-  transition: all 0.2s ease-in-out;
-`
-
-const Sidebar = styled.nav`
-  width: 24rem;
-  height: 100vh;
   display: flex;
   flex-direction: column;
-  gap: 4.4rem 0;
-  padding: 4.4rem 0 ;
-  list-style: none;
-  color: var(--white);
-  background-color: var(--black);
+  gap: 4.4rem;
+  margin-top: 8rem;
+  padding: 2.4rem 12rem 6.4rem 12rem ;
+  overflow-y: auto;
+  transition: all 0.2s ease-in-out;
+  scroll-behavior: smooth;
+
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: var(--white);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--red);
+    border-radius: 2px;
+  }
 `
-
-
-
 
 export {
   Container,
   Content,
-  Sidebar,
 }

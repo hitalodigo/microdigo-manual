@@ -8,7 +8,7 @@ const MoutingPanelContainer = styled.section`
 
 const MoutingPanelHeader = styled.header``;
 
-const MoutingPanelSection = styled.div`
+const MoutingPanelContent = styled.section`
     display: flex;
     flex-direction: column;
     gap: 3.2rem;
@@ -17,5 +17,5 @@ const MoutingPanelSection = styled.div`
 export {
     MoutingPanelContainer,
     MoutingPanelHeader,
-    MoutingPanelSection
+    MoutingPanelContent
 }

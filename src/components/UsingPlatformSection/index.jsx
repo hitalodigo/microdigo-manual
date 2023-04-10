@@ -11,8 +11,6 @@ import imgCriandoFluxos1 from '../../assets/images/criando-fluxos1.png';
 import imgCriandoFluxos2 from '../../assets/images/criando-fluxos2.png';
 import imgManuseandoFluxos1 from '../../assets/images/manuseando-fluxos1.png';
 import imgManuseandoFluxos2 from '../../assets/images/manuseando-fluxos2.png';
-import imgForm from '../../assets/images/formulario-registro.png';
-import imgFormPreenchido from '../../assets/images/formulario-registro-preenchido.png';
 
 import {
     ImageContainer,
@@ -25,10 +23,10 @@ import {
 import { UsingPlatformContainer, UsingPlatformContent, UsingPlatformHeader } from "./styles";
 
 
-function UsingPlatform() {
+function UsingPlatformSection() {
 
     return (
-        <UsingPlatformContainer>
+        <UsingPlatformContainer id='using-platform-section'>
             <UsingPlatformHeader>
                 <Title size='40'>
                     Usando a plataforma microdigo
@@ -227,39 +225,6 @@ function UsingPlatform() {
                         </Row>
                     </ListItem>
 
-                    <ListItem>
-                        <Title size='24' >Conectando Dispositivos Físicos</Title>
-                        <Row
-                            gap='32'
-                        >
-
-                            <Paragraph>
-                                Primeiramente é preciso ter em mãos um dispositivo físico, também chamado de endpoint. Clique no botão connect para conectá-lo com a plataforma. Ao fim do pareamento, uma tela de configuração irá aparecer.
-                            </Paragraph>
-
-                            <ImageContainer
-                                width='273'
-                                height='318'
-                            >
-                                <img src={imgForm} alt="Formulario para registro de dispostivo físico, não preenchido" loading="lazy" />
-                                <span className="legend">Formulário para registro de dispositivo físico</span>
-                            </ImageContainer>
-
-                            <Paragraph>
-                                Preencha as áreas com o nome e a cor que deseja para o dispositivo, depois, selecione qual sensor está ligado ao endpoint. Para finalizar a configuração aperte o botão “Salvar”.
-                            </Paragraph>
-
-                            <ImageContainer
-                                width='283'
-                                height='350'
-                            >
-                                <img src={imgFormPreenchido} alt="Formulario para registro de dispostivo físico, preenchido" loading="lazy" />
-                                <span className="legend">Formulário preenchido para registro de dispositivo físico</span>
-                            </ImageContainer>
-                        </Row>
-
-                    </ListItem>
-
                 </OrderList>
 
             </UsingPlatformContent>
@@ -268,4 +233,4 @@ function UsingPlatform() {
     )
 }
 
-export default UsingPlatform;
+export default UsingPlatformSection;

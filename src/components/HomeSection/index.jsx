@@ -1,32 +1,33 @@
 import {
     HomeContainer,
     HomeHeader,
-    HomeSection,
+    HomeContent,
     YouWillLearnContainer
 } from "./styles";
 import { Paragraph, Row, Title } from '../../styles/common'
 
-function HomeContent() {
+function HomeSection() {
     return (
         <HomeContainer>
             <HomeHeader>
                 <Title
-                    size='40'
+                    id="home"
+                    size='48'
                 >
                     Bem-vindo ao manual da plataforma microdigo!
                 </Title>
             </HomeHeader>
 
-            <HomeSection>
+            <HomeContent>
                 <Row
                     gap='12'
                 >
                     <Paragraph size='16'>
                         {`Esta página fornecerá uma introdução aos principais conceitos e funcionalidades existentes dentro da plataforma. 
-                        Se você ainda não utilizou a plataforma, recomendamos que efetue a leitura do manual antes utilizá-la.`}
+                        Se você ainda não utilizou a plataforma, recomendamos que efetue a leitura do manual antes de utilizá-la.`}
                     </Paragraph>
 
-                    <Paragraph size='16'>Recomendamos também que para melhor utilizar a plataforma, esteja em uma conexão de internet estável e utilize os navegadores <strong>Google Chrome</strong>, <strong>Microsoft Edge</strong> ou <strong>Opera</strong></ Paragraph>
+                    <Paragraph size='16'>Recomendamos também que para melhor utilizar a plataforma, esteja em uma conexão de internet estável e utilize os navegadores <strong>Google Chrome</strong>, <strong>Microsoft Edge</strong> ou <strong>Opera</strong>.</ Paragraph>
                 </Row>
                 <YouWillLearnContainer>
                     <h2>Você vai aprender</h2>
@@ -45,10 +46,10 @@ function HomeContent() {
                         <li>Como manusear fluxos criados</li>
                     </ul>
                 </YouWillLearnContainer>
-            </HomeSection>
+            </HomeContent>
 
         </HomeContainer>
     )
 }
 
-export default HomeContent;
+export default HomeSection;

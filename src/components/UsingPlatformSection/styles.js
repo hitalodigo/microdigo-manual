@@ -6,7 +6,7 @@ const UsingPlatformContainer = styled.section`
     gap: 2.4rem;
 `
 
-const UsingPlatformContent = styled.div``
+const UsingPlatformContent = styled.section``
 
 const UsingPlatformHeader = styled.header``
 

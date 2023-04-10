@@ -6,9 +6,9 @@ import {
     ImageContainer,
     Paragraph
 } from "../../styles/common";
-import { HeaderContainer, HeaderSection, Header } from './styles'
+import { HeaderContainer, HeaderContent, Header } from './styles'
 
-function HeaderContent() {
+function HeaderSection() {
 
     return (
         <HeaderContainer>
@@ -16,12 +16,13 @@ function HeaderContent() {
             <Header>
                 <Title
                     size='40'
+                    id='header-section'
                 >
                     Cabeçalho
                 </Title>
             </Header>
 
-            <HeaderSection>
+            <HeaderContent>
                 <Row
                     gap='24'
                 >
@@ -38,10 +39,10 @@ function HeaderContent() {
 
                 </Row>
 
-            </HeaderSection>
+            </HeaderContent>
 
         </HeaderContainer>
     )
 }
 
-export default HeaderContent;
+export default HeaderSection;
