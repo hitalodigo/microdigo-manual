@@ -1,16 +1,15 @@
 import { useState } from 'react';
 
-import imgLogo from './assets/images/logo.png';
-
 import GlobalStyles from './styles/global';
 
 import SidebarContent from './components/SidebarContent';
 import HeaderContent from './components/HeaderContent';
 import MoutingPanelContent from './components/MoutingPainelContent';
 
-import { Container, Content, LogoContainer, MenuItem, MenuList, Sidebar } from './styles/app-styles'
+import { Container, Content, Sidebar } from './styles/app-styles'
 import HomeContent from './components/HomeContent';
 import UsingPlatform from './components/UsingPlatform';
+import Header from './components/Header';
 
 function App() {
 
@@ -21,7 +20,9 @@ function App() {
       <GlobalStyles />
 
       <Container>
-        <Sidebar>
+
+        <Header />
+        {/* <Sidebar>
           <LogoContainer>
             <img
               src={imgLogo}
@@ -73,7 +74,7 @@ function App() {
 
           {currentSection === 'using-platform' && <UsingPlatform />}
 
-        </Content>
+        </Content> */}
       </Container>
     </>
   )

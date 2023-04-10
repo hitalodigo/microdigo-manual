@@ -7,6 +7,7 @@ export default createGlobalStyle`
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  text-decoration: none;
   font-family: "Exo 2", sans-serif;
   user-select: none;
 }
@@ -38,6 +39,5 @@ body {
   color: var(--black);
   background-color: var(--white);
 }
-
 
 `
