@@ -1,4 +1,4 @@
-import imgHeader from '../../assets/images/header.png';
+import imgHeader from '../../assets/images/cabecalho/example-cabecalho.png';
 
 import {
     Row,
@@ -30,11 +30,11 @@ function HeaderSection() {
                         Parte superior em azul na interface, onde se encontra a logo da Microdigo. Atualmente não contém nenhuma função.
                     </Paragraph>
                     <ImageContainer
-                        width="540"
-                        height="35"
+                        width="100%"
+                        height="100%"
                     >
                         <img src={imgHeader} alt="Imagem do cabeçalho" loading="lazy" />
-                        <span className="legend">Cabeçalho</span>
+                        <span className="legend">Cabeçalho em destaque na cor azul</span>
                     </ImageContainer>
 
                 </Row>

@@ -16,7 +16,14 @@ const Row = styled.div`
     flex-direction: ${({ orientation }) => orientation ? orientation : 'column'};
     align-items: ${({ orientation }) => orientation === 'row' ? 'center' : 'flex-start'};
     gap: ${({ gap }) => gap ? `${gap / 10}rem` : 0};
+`
 
+const Column = styled.div`
+    width: ${({ width }) => width ? width : '100%'};
+    display: flex;
+    flex-direction: column;
+    align-items: ${({ alignItems }) => alignItems ? alignItems : 'flex-start'};;
+    gap: ${({ gap }) => gap ? `${gap / 10}rem` : 0};
 `
 
 const Paragraph = styled.p`     
@@ -53,7 +60,7 @@ const ImageContainer = styled.div`
 const OrderList = styled.ol`
     display: flex;
     flex-direction: column;
-    gap: 4.4rem;
+    gap: ${({ gap }) => gap ? `${gap / 10}rem` : '4.4rem'};
     padding-left: 4rem;
 
 `
@@ -65,12 +72,8 @@ const DesorderList = styled.ul`
 const ListItem = styled.li` 
     font-size: 2rem;
 
-    p{
-     font-size: 1.6rem;
-    }
-
     > h1 + div{
-        margin-top: 1.2rem;
+        margin-top: 3.2rem;
     }
 
 `
@@ -78,6 +81,7 @@ const ListItem = styled.li`
 export {
     Title,
     Row,
+    Column,
     Paragraph,
     ImageContainer,
     OrderList,

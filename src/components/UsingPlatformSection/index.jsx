@@ -1,18 +1,19 @@
-import imgSelectComponenteEntrada from '../../assets/images/selecionando-componente-entrada.png';
-import imgComponenteEntradaArrastando from '../../assets/images/componente-entrada-arrastando.png';
-import imgCriandoConexao1 from '../../assets/images/criando-conexao1.png';
-import imgCriandoConexao2 from '../../assets/images/criando-conexao2.png';
-import imgCriandoConexao3 from '../../assets/images/criando-conexao3.png';
-import imgHabilitandoBtnExcluir from '../../assets/images/habilitando-botao-excluir-linha.png';
-import imgExcluirArrastando from '../../assets/images/excluir-arrastando.png';
-import imgExcluirBtnAction from '../../assets/images/excluir-botao-action.png';
-import imgConfirmExclusion from '../../assets/images/confirm-exclusion.png';
-import imgCriandoFluxos1 from '../../assets/images/criando-fluxos1.png';
-import imgCriandoFluxos2 from '../../assets/images/criando-fluxos2.png';
-import imgManuseandoFluxos1 from '../../assets/images/manuseando-fluxos1.png';
-import imgManuseandoFluxos2 from '../../assets/images/manuseando-fluxos2.png';
+import imgAddComponentesEx1 from '../../assets/images/usando-plataforma/add-componentes-ex1.png';
+import imgAddComponentesEx2 from '../../assets/images/usando-plataforma/add-componentes-ex2.png';
+import imgCriandoConexao1 from '../../assets/images/usando-plataforma/criando-conexao-ex1.png';
+import imgCriandoConexao2 from '../../assets/images/usando-plataforma/criando-conexao-ex2.png';
+import imgCriandoConexao3 from '../../assets/images/usando-plataforma/criando-conexao-ex3.png';
+import imgHabilitandoBtnExcluir from '../../assets/images1/habilitando-botao-excluir-linha.png';
+import imgExcluirArrastando from '../../assets/images1/excluir-arrastando.png';
+import imgExcluirBtnAction from '../../assets/images1/excluir-botao-action.png';
+import imgConfirmExclusion from '../../assets/images1/confirm-exclusion.png';
+import imgCriandoFluxos1 from '../../assets/images1/criando-fluxos1.png';
+import imgCriandoFluxos2 from '../../assets/images1/criando-fluxos2.png';
+import imgManuseandoFluxos1 from '../../assets/images1/manuseando-fluxos1.png';
+import imgManuseandoFluxos2 from '../../assets/images1/manuseando-fluxos2.png';
 
 import {
+    Column,
     ImageContainer,
     ListItem,
     OrderList,
@@ -20,7 +21,7 @@ import {
     Row,
     Title
 } from "../../styles/common";
-import { UsingPlatformContainer, UsingPlatformContent, UsingPlatformHeader } from "./styles";
+import { AddComponentsCard, AddComponentsContainer, CreateConnectionCard, CreateConnectionListCard, UsingPlatformContainer, UsingPlatformContent, UsingPlatformHeader } from "./styles";
 
 
 function UsingPlatformSection() {
@@ -37,30 +38,39 @@ function UsingPlatformSection() {
                 <OrderList>
                     <ListItem>
                         <Title size='24'>Adicionando componentes ao painel de montagem</Title>
-                        <Row
-                            gap='32'
-                        >
-                            <Paragraph>
-                                Selecione na barra lateral através dos botões circulares qual o tipo do componente desejado.
-                            </Paragraph>
-                            <ImageContainer
-                                width='146'
-                                height='290'
-                            >
-                                <img src={imgSelectComponenteEntrada} alt="Imagem 1 do passo a passo para selecionar componente de entrada" loading="lazy" />
-                                <span className="legend">Seção componentes de entrada selecionada</span>
-                            </ImageContainer>
-                            <Paragraph>
-                                Com o tipo selecionado, escolha dentre os componentes apresentados. Clique no elemento, arraste e solte-o no painel de montagem. Arrastando tal componente é possível reposicioná-lo na tela como desejado.
-                            </Paragraph>
+                        <Row>
+                            <AddComponentsContainer>
+                                <AddComponentsCard
+                                    textAlign="end"
+                                >
+                                    <Paragraph size='16'>
+                                        <span>1.</span>Selecione na barra lateral através dos botões circulares qual o tipo do componente desejado.
+                                    </Paragraph>
+                                    <ImageContainer
+                                        width='300'
+                                        height='400'
+                                    >
+                                        <img src={imgAddComponentesEx1} alt="Imagem 1 do passo a passo para selecionar componente de entrada" loading="lazy" />
+                                        <span className="legend">Componente de entrada sendo selecionado</span>
+                                    </ImageContainer>
+                                </AddComponentsCard>
 
-                            <ImageContainer
-                                width='190'
-                                height='190'
-                            >
-                                <img src={imgComponenteEntradaArrastando} alt="Potenciômetro sendo arrastado" loading="lazy" />
-                                <span className="legend">"Potenciômetro" sendo arrastado para o painel de montagem</span>
-                            </ImageContainer>
+                                <AddComponentsCard>
+                                    <ImageContainer
+                                        width='300'
+                                        height='400'
+                                    >
+                                        <img src={imgAddComponentesEx2} alt="Potenciômetro sendo arrastado" loading="lazy" />
+                                        <span className="legend">Componente de Entrada “Potenciômetro” sendo arrastado para o painel de montagem.</span>
+                                    </ImageContainer>
+
+                                    <Paragraph size='16'>
+                                        <span>2.</span>Com o tipo selecionado, escolha dentre os componentes apresentados. Clique no elemento, arraste e solte-o no painel de montagem. Arrastando tal componente é possível reposicioná-lo na tela como desejado.
+                                    </Paragraph>
+                                </AddComponentsCard>
+                            </AddComponentsContainer>
+
+
                         </Row>
                     </ListItem>
 
@@ -69,41 +79,51 @@ function UsingPlatformSection() {
                         <Row
                             gap='32'
                         >
-                            <Paragraph>
-                                Certifique-se de que há dois componentes com conectores de tipos diferentes na tela, por exemplo, se adicionar um componente de entrada (conector à direita), pode acrescentar uma condicional ou componente de saída (que contém conectores à esquerda).
-                            </Paragraph>
+                            <CreateConnectionListCard>
 
-                            <ImageContainer
-                                width='375'
-                                height='160'
-                            >
-                                <img src={imgCriandoConexao1} alt="Potenciometro e condicional E no painel de montagem" loading="lazy" />
-                                <span className="legend">Potenciômetro e condicional E no painel de montagem</span>
-                            </ImageContainer>
+                                <CreateConnectionCard>
+                                    <Paragraph size='16'>
+                                        <span>3.</span>Certifique-se de que há dois componentes com conectores de tipos diferentes na tela, por exemplo, se adicionar um componente de entrada (conector à direita), pode acrescentar uma condicional ou componente de saída (que contém conectores à esquerda).
+                                    </Paragraph>
 
-                            <Paragraph>
-                                Clique em um dos conectores e arraste, assim será visível o surgimento de uma linha amarela.
-                            </Paragraph>
+                                    <ImageContainer
+                                        width='320'
+                                        height='140'
+                                    >
+                                        <img src={imgCriandoConexao1} alt="Potenciometro e condicional E no painel de montagem" loading="lazy" />
+                                        <span className="legend">Potenciômetro e condicional E no painel de montagem.</span>
+                                    </ImageContainer>
+                                </CreateConnectionCard>
 
-                            <ImageContainer
-                                width='370'
-                                height='160'
-                            >
-                                <img src={imgCriandoConexao2} alt="Criação da linha de conexão entre potenciometro e componente E" loading="lazy" />
-                                <span className="legend">Interação com conector à direita do Potenciômetro criando uma linha de conexão</span>
-                            </ImageContainer>
+                                <CreateConnectionCard>
+                                    <Paragraph size='16'>
+                                        <span>4.</span>Clique em um dos conectores e arraste, assim será visível o surgimento de uma linha amarela.
+                                    </Paragraph>
 
-                            <Paragraph>
-                                Para criar a conexão, solte a linha amarela sobre o conector do segundo componente. Mas, caso queira cancelar a ação, basta soltar a linha em qualquer espaço vazio do painel de montagem.
-                            </Paragraph>
+                                    <ImageContainer
+                                        width='320'
+                                        height='140'
+                                    >
+                                        <img src={imgCriandoConexao2} alt="Criação da linha de conexão entre potenciometro e componente E" loading="lazy" />
+                                        <span className="legend">Interação com conector à direita do Potenciômetro criando uma linha de conexão</span>
+                                    </ImageContainer>
+                                </CreateConnectionCard>
 
-                            <ImageContainer
-                                width='370'
-                                height='160'
-                            >
-                                <img src={imgCriandoConexao3} alt="Criação da linha finalizada" loading="lazy" />
-                                <span className="legend">Conexão entre dois componentes criada</span>
-                            </ImageContainer>
+                                <CreateConnectionCard>
+                                    <Paragraph size='16'>
+                                        <span>5.</span>Para criar a conexão, solte a linha amarela sobre o conector do segundo componente. Mas, caso queira cancelar a ação, basta soltar a linha em qualquer espaço vazio do painel de montagem.
+                                    </Paragraph>
+
+                                    <ImageContainer
+                                        width='320'
+                                        height='140'
+                                    >
+                                        <img src={imgCriandoConexao3} alt="Criação da linha finalizada" loading="lazy" />
+                                        <span className="legend">Conexão entre dois componentes criada</span>
+                                    </ImageContainer>
+                                </CreateConnectionCard>
+                            </CreateConnectionListCard>
+
                         </Row>
                     </ListItem>
 
