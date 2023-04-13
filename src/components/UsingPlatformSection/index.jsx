@@ -50,7 +50,7 @@ function UsingPlatformSection() {
             </UsingPlatformHeader>
 
             <UsingPlatformContent>
-                <OrderList>
+                <OrderList gap='64'>
                     <ListItem>
                         <Title size='24'>Adicionando componentes ao painel de montagem</Title>
                         <Row>
@@ -235,13 +235,13 @@ function UsingPlatformSection() {
                         >
                             <CreateFlowContainer>
                                 <Column
-                                    width='320'
+                                    width='50%'
                                     gap='24'
                                 >
                                     <SequencyNumber>11.</SequencyNumber>
                                     <ImageContainer
-                                        width='100%'
-                                        height='100%'
+                                        width='480'
+                                        height='300'
                                     >
                                         <img src={imgCriandoFluxos1} alt="Criando fluxos maiores" loading="lazy" />
                                         <span className="legend">Sensor de luz, sensor de temperatura, condicionais E e OU e LED adicionados ao painel de montagem. </span>
@@ -256,13 +256,13 @@ function UsingPlatformSection() {
 
 
                                 <Column
-                                    width='320'
+                                    width='50%'
                                     gap='24'
                                 >
                                     <SequencyNumber>12.</SequencyNumber>
                                     <ImageContainer
-                                        width='100%'
-                                        height='100%'
+                                        width='480'
+                                        height='280'
                                     >
                                         <img src={imgCriandoFluxos2} alt="Criacao de fluxo finalizada" loading="lazy" />
                                         <span className="legend">Fluxo criado</span>

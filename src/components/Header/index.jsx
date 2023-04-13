@@ -13,6 +13,8 @@ function Header() {
 
     const [isActive, setIsActive] = useState(false);
 
+    const disableMenu = () => setIsActive(false);
+
     return (
         <HeaderContainer>
 
@@ -25,21 +27,51 @@ function Header() {
             </LogoContainer>
 
             <MenuList isActive={isActive}>
-                <MenuItem>
+                <MenuItem
+                    onClick={() => {
+                        if (isActive) {
+                            disableMenu();
+                        }
+                    }}
+                >
                     <a href="#home">Início</a>
                 </MenuItem>
-                <MenuItem>
+                <MenuItem
+                    onClick={() => {
+                        if (isActive) {
+                            disableMenu();
+                        }
+                    }}
+                >
                     <a href="#header-section">Cabeçalho</a>
                 </MenuItem>
-                <MenuItem>
+                <MenuItem
+                    onClick={() => {
+                        if (isActive) {
+                            disableMenu();
+                        }
+                    }}
+                >
                     <a href="#sidebar-section">Barra lateral</a>
                 </MenuItem>
-                <MenuItem>
+                <MenuItem
+                    onClick={() => {
+                        if (isActive) {
+                            disableMenu();
+                        }
+                    }}
+                >
                     <a href="#mouting-panel-section">
                         Painel de montagem
                     </a>
                 </MenuItem>
-                <MenuItem>
+                <MenuItem
+                    onClick={() => {
+                        if (isActive) {
+                            disableMenu();
+                        }
+                    }}
+                >
                     <a href="#using-platform-section">
                         Usando plataforma
                     </a>
@@ -48,7 +80,7 @@ function Header() {
             <MenuIcon
                 className={`${isActive ? 'isActive' : ''}`}
                 onClick={() => {
-                    setIsActive((prevActive) => !prevActive)
+                    setIsActive((prevActive) => !prevActive);
                 }}
             ></MenuIcon>
         </HeaderContainer>

@@ -9,16 +9,17 @@ const Container = styled.main`
 `
 
 const Content = styled.article`
+ position: relative;
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 6.4rem;
+  gap: 8rem;
   margin-top: 8rem;
   padding: 2.4rem 12rem 6.4rem 12rem ;
   overflow-y: auto;
   transition: all 0.2s ease-in-out;
   scroll-behavior: smooth;
-
+  z-index: 0;
   &::-webkit-scrollbar {
     width: 8px;
   }

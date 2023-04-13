@@ -22,16 +22,18 @@ function SidebarSection() {
             </SidebarHeader>
 
             <SidebarContent>
-                <Paragraph size='16'>A barra lateral, encontrada na esquerda da tela, é dividida em duas colunas: a primeira, onde será possível selecionar o tipo do componente por meio de botões; a segunda, onde irá aparecer uma série de elementos ligados ao tipo escolhido, os quais podem ser arrastados para a área mais clara, chamada painel de montagem.</ Paragraph>
-                <ImageContainer
-                    width='100%'
-                    height='100%'
-                >
-                    <img src={imgBarraLateral} alt="Imagem do cabeçalho" loading="lazy" />
-                    <span className="legend">
-                        Barra lateral no canto esquerdo em amarelo, com foco em destaque.
-                    </span>
-                </ImageContainer>
+                <Row gap='12'>
+                    <Paragraph size='16'>A barra lateral, encontrada na esquerda da tela, é dividida em duas colunas: a primeira, onde será possível selecionar o tipo do componente por meio de botões; a segunda, onde irá aparecer uma série de elementos ligados ao tipo escolhido, os quais podem ser arrastados para a área mais clara, chamada painel de montagem.</ Paragraph>
+                    <ImageContainer
+                        width='100%'
+                        height='100%'
+                    >
+                        <img src={imgBarraLateral} alt="Imagem do cabeçalho" loading="lazy" />
+                        <span className="legend">
+                            Barra lateral no canto esquerdo em amarelo, com foco em destaque.
+                        </span>
+                    </ImageContainer>
+                </Row>
 
                 <Row>
 

@@ -3,7 +3,7 @@ import styled from "styled-components";
 const UsingPlatformContainer = styled.section`
     display: flex;
     flex-direction: column;
-    gap: 2.4rem;
+    gap: 4.4rem;
 `
 
 const UsingPlatformContent = styled.section``
@@ -112,7 +112,7 @@ const CreateFlowContainer = styled.div`
 width: 100%;
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     gap: 6.4rem;
 
 `

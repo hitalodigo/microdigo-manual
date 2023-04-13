@@ -16,6 +16,7 @@ const Row = styled.div`
     flex-direction: ${({ orientation }) => orientation ? orientation : 'column'};
     align-items: ${({ orientation }) => orientation === 'row' ? 'center' : 'flex-start'};
     gap: ${({ gap }) => gap ? `${gap / 10}rem` : 0};
+    flex-wrap:${({ wrap }) => wrap ? wrap : 'nowrap'};
 `
 
 const Column = styled.div`
@@ -34,7 +35,6 @@ const Paragraph = styled.p`
 const ImageContainer = styled.div`
     display: flex;
     flex-direction: column;
-    position: relative;
     width: ${(props) => props.width ? `${props.width / 10}rem` : 0};
     height: ${(props) => props.height ? `${props.height / 10}rem` : 0};
     margin: ${({ align }) => {
@@ -45,7 +45,7 @@ const ImageContainer = styled.div`
         return typeAlign();
     }};
     gap:1.2rem;
-
+    
     img{
         width: 100%;
         height: 100%;

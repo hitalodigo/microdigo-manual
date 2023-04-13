@@ -11,7 +11,7 @@ const MoutingPanelHeader = styled.header``;
 const MoutingPanelContent = styled.section`
     display: flex;
     flex-direction: column;
-    gap: 3.2rem;
+    gap: 6.4rem;
 `;
 
 const MoutingPanelListCard = styled.div`

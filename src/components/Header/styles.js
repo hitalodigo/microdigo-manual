@@ -12,6 +12,7 @@ const HeaderContainer = styled.header`
     height: 8rem;
     padding: 0 4.4rem;
     background-color: var(--blue);
+    z-index: 1;
 `
 
 
@@ -26,13 +27,14 @@ const LogoContainer = styled.div`
 `
 
 const MenuList = styled.ul`
+  position: relative;
   display: flex;
   align-items: center;
   gap: 3.2rem;
   height: 100%;
 
   @media (max-width: 968px) {
-    position: absolute;
+    position: fixed;
     inset: 0;
     width: 100vw;
     height: 100vh;
@@ -73,6 +75,8 @@ const MenuItem = styled.li`
     border-radius: 8px;
     background-color: var(--yellow);
     transition: width 0.3s ease-in-out;
+    z-index: 10;
+
   }
   &:hover::after{
     width: 100%;
@@ -80,7 +84,6 @@ const MenuItem = styled.li`
 
   @media (max-width: 968px) {
     padding: 2.4rem 0;
-
     &::after{
       display: none;
     }

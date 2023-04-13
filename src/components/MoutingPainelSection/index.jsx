@@ -5,6 +5,8 @@ import imgBotaoZoom from '../../assets/images/botoes/botao-zoom.png';
 import imgZoomIn from '../../assets/images/painel-montagem/zoom-in.png';
 import imgZoomOut from '../../assets/images/painel-montagem/zoom-out.png';
 import imgBotaoFaq from '../../assets/images/botoes/botao-faq.png';
+import imgMovimentacaoEx1 from '../../assets/images/painel-montagem/movimentacao-ex1.png';
+import imgMovimentacaoEx2 from '../../assets/images/painel-montagem/movimentacao-ex2.png';
 
 
 import {
@@ -34,21 +36,23 @@ function MoutingPanelSection() {
             </MoutingPanelHeader>
 
             <MoutingPanelContent>
-                <Paragraph size='16'>Esta é a área onde serão criados os fluxos. </ Paragraph>
+                <Row gap='12'>
+                    <Paragraph size='16'>Esta é a área onde serão criados os fluxos. </ Paragraph>
 
-                <ImageContainer
-                    width='100%'
-                    height='100%'
-                >
-                    <img
-                        src={imgPainelMontagem}
-                        alt="Ilustação do painel de montagem"
-                        loading="lazy"
-                    />
-                    <span className="legend">Painel de montagem</span>
-                </ImageContainer>
+                    <ImageContainer
+                        width='100%'
+                        height='100%'
+                    >
+                        <img
+                            src={imgPainelMontagem}
+                            alt="Ilustação do painel de montagem"
+                            loading="lazy"
+                        />
+                        <span className="legend">Painel de montagem</span>
+                    </ImageContainer>
+                </Row>
 
-                <OrderList gap='64'>
+                <OrderList gap='80'>
                     <ListItem>
                         <Row
                             gap='24'
@@ -180,6 +184,46 @@ function MoutingPanelSection() {
                                 />
 
                             </ImageContainer>
+                        </Row>
+                    </ListItem>
+
+                    <ListItem>
+                        <Row gap='12'>
+                            <Title size='20'>Movimentação</Title>
+                            <Paragraph size='14'>
+                                É possível clicar e arrastar a área em branco e assim se mover pelo painel de montagem.
+                            </Paragraph>
+
+                            <Row
+                                orientation='row'
+                                gap='44'
+                            >
+                                <ImageContainer
+                                    width='50%'
+                                    height='50%'
+                                >
+                                    <img
+                                        src={imgMovimentacaoEx1}
+                                        alt="Ilustação do botão de faq"
+                                        loading="lazy"
+                                        title="Botão de faq"
+                                    />
+
+                                </ImageContainer>
+
+                                <ImageContainer
+                                    width='50%'
+                                    height='50%'
+                                >
+                                    <img
+                                        src={imgMovimentacaoEx2}
+                                        alt="Ilustação do botão de faq"
+                                        loading="lazy"
+                                        title="Botão de faq"
+                                    />
+
+                                </ImageContainer>
+                            </Row>
                         </Row>
                     </ListItem>
                 </OrderList>

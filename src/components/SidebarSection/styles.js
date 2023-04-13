@@ -11,7 +11,7 @@ const SidebarHeader = styled.header``
 const SidebarContent = styled.div`
     display: flex;
     flex-direction: column;
-    gap: 3.2rem;
+    gap: 8rem;
 `
 
 const SidebarExampleContainer = styled.div`
