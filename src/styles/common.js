@@ -19,7 +19,7 @@ const Row = styled.div`
 `
 
 const Column = styled.div`
-    width: ${({ width }) => width ? width : '100%'};
+    width: ${({ width }) => width ? `${width / 10}rem` : '100%'};
     display: flex;
     flex-direction: column;
     align-items: ${({ alignItems }) => alignItems ? alignItems : 'flex-start'};;
@@ -28,6 +28,7 @@ const Column = styled.div`
 
 const Paragraph = styled.p`     
     font-size: ${({ size }) => size ? `${size / 10}rem` : 0};
+    text-align: ${({ textAlign }) => textAlign ? textAlign : 'initial'};
 `
 
 const ImageContainer = styled.div`
@@ -43,6 +44,7 @@ const ImageContainer = styled.div`
 
         return typeAlign();
     }};
+    gap:1.2rem;
 
     img{
         width: 100%;

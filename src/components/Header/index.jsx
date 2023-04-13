@@ -6,7 +6,7 @@ import {
     MenuList
 } from "./styles";
 
-import imgLogoMicrodigo from '../../assets/images1/logo-microdigo.svg';
+import imgLogoMicrodigo from '../../assets//images/logo-microdigo.svg';
 import { useState } from "react";
 
 function Header() {

@@ -12,7 +12,7 @@ const Content = styled.article`
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 4.4rem;
+  gap: 6.4rem;
   margin-top: 8rem;
   padding: 2.4rem 12rem 6.4rem 12rem ;
   overflow-y: auto;
