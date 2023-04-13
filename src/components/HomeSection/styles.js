@@ -5,7 +5,15 @@ const HomeContainer = styled.section`
   flex-direction: column;
   gap: 1.2rem;
 `
-const HomeHeader = styled.header``
+const HomeHeader = styled.header`
+
+  @media (max-width: 768px) {
+    h1{
+    font-size: 3.2rem;
+
+    }
+  }
+`
 
 const HomeContent = styled.section`
   display: flex;

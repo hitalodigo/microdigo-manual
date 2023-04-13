@@ -23,7 +23,9 @@ import {
     MoutingPanelHeader,
     MoutingPanelContent,
     MoutingPanelListCard,
-    MoutingPanelCard
+    MoutingPanelCard,
+    ZoomContainer,
+    MovimentationContainer
 } from "./styles";
 
 
@@ -108,7 +110,7 @@ function MoutingPanelSection() {
                             <Title size='20'>Zoom</Title>
 
 
-                            <Row orientation='row'>
+                            <ZoomContainer>
 
                                 <Column gap='24'>
                                     <Paragraph size='16'>
@@ -132,6 +134,7 @@ function MoutingPanelSection() {
                                     <ImageContainer
                                         width='400'
                                         height='220'
+                                        className='container-img'
                                     >
                                         <img
                                             src={imgZoomIn}
@@ -145,6 +148,7 @@ function MoutingPanelSection() {
                                     <ImageContainer
                                         width='400'
                                         height='220'
+                                        className='container-img'
                                     >
                                         <img
                                             src={imgZoomOut}
@@ -157,7 +161,7 @@ function MoutingPanelSection() {
 
                                     </ImageContainer>
                                 </Column>
-                            </Row>
+                            </ZoomContainer>
                         </Row>
 
                     </ListItem>
@@ -194,13 +198,11 @@ function MoutingPanelSection() {
                                 É possível clicar e arrastar a área em branco e assim se mover pelo painel de montagem.
                             </Paragraph>
 
-                            <Row
-                                orientation='row'
-                                gap='44'
-                            >
+                            <MovimentationContainer>
                                 <ImageContainer
                                     width='50%'
                                     height='50%'
+                                    className='container-img'
                                 >
                                     <img
                                         src={imgMovimentacaoEx1}
@@ -214,6 +216,7 @@ function MoutingPanelSection() {
                                 <ImageContainer
                                     width='50%'
                                     height='50%'
+                                    className='container-img'
                                 >
                                     <img
                                         src={imgMovimentacaoEx2}
@@ -223,7 +226,7 @@ function MoutingPanelSection() {
                                     />
 
                                 </ImageContainer>
-                            </Row>
+                            </MovimentationContainer>
                         </Row>
                     </ListItem>
                 </OrderList>

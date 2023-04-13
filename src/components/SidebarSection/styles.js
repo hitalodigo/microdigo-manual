@@ -40,6 +40,32 @@ const SidebarExampleContainer = styled.div`
         flex-direction: column;
         gap: 1.2rem;
     }
+
+    @media (max-width:1268px) {
+        justify-content: center;
+        gap: 4.4rem;
+
+        & .components,
+        & .selected-component{
+            position: relative;
+            inset: 0;
+            margin: 0 auto;
+        }
+    }
+
+    @media (max-width: 620px) {
+        & .components,
+        & .selected-component{
+            width: 32rem;
+        }
+    }
+
+    @media (max-width: 340px) {
+        & .components,
+        & .selected-component{
+            width: 26rem;
+        }
+    }
 `
 
 const ButtonDescriptionContainer = styled.div`
@@ -104,6 +130,47 @@ const ButtonDescriptionItem = styled.div`
             top: 0;
             border-radius: 0 0 8px 0;
         }
+    }
+
+    @media (max-width:960px) {
+        width: 100%;
+        height: 28rem;
+
+        &.entry,
+        &.exit,
+        &.conditional,
+        &.events{
+            border-radius: 24px;
+        }
+
+        &.entry{
+
+            & div{
+                border-radius: 8px 8px 24px 8px;
+            }
+        }
+
+        &.exit{
+            & div{
+                border-radius: 8px 8px 8px 24px ;
+            }
+        }
+
+        &.conditional{
+            & div{
+                border-radius: 8px 24px 8px 8px ;
+            }
+        }
+
+        &.events{
+            & div{
+                border-radius: 24px 8px 8px 8px ;
+            }
+        }
+    }
+
+    @media (max-width: 340px) {
+        height: 32rem;
     }
 `
 

@@ -31,7 +31,9 @@ import {
     CreateFlowContainer,
     DeleteComponentCard,
     DeleteComponentListCard,
+    MovementFlowCard,
     MovementFlowContainer,
+    MovementFlowListCards,
     SequencyNumber,
     UsingPlatformContainer,
     UsingPlatformContent,
@@ -64,6 +66,7 @@ function UsingPlatformSection() {
                                     <ImageContainer
                                         width='300'
                                         height='400'
+                                        className='container-img'
                                     >
                                         <img src={imgAddComponentesEx1} alt="Imagem 1 do passo a passo para selecionar componente de entrada" loading="lazy" />
                                         <span className="legend">Componente de entrada sendo selecionado</span>
@@ -74,6 +77,7 @@ function UsingPlatformSection() {
                                     <ImageContainer
                                         width='300'
                                         height='400'
+                                        className='container-img'
                                     >
                                         <img src={imgAddComponentesEx2} alt="Potenciômetro sendo arrastado" loading="lazy" />
                                         <span className="legend">Componente de Entrada “Potenciômetro” sendo arrastado para o painel de montagem.</span>
@@ -104,6 +108,7 @@ function UsingPlatformSection() {
                                     <ImageContainer
                                         width='320'
                                         height='140'
+                                        className='container-img'
                                     >
                                         <img src={imgCriandoConexao1} alt="Potenciometro e condicional E no painel de montagem" loading="lazy" />
                                         <span className="legend">Potenciômetro e condicional E no painel de montagem.</span>
@@ -118,6 +123,7 @@ function UsingPlatformSection() {
                                     <ImageContainer
                                         width='320'
                                         height='140'
+                                        className='container-img'
                                     >
                                         <img src={imgCriandoConexao2} alt="Criação da linha de conexão entre potenciometro e componente E" loading="lazy" />
                                         <span className="legend">Interação com conector à direita do Potenciômetro criando uma linha de conexão</span>
@@ -132,6 +138,7 @@ function UsingPlatformSection() {
                                     <ImageContainer
                                         width='320'
                                         height='140'
+                                        className='container-img'
                                     >
                                         <img src={imgCriandoConexao3} alt="Criação da linha finalizada" loading="lazy" />
                                         <span className="legend">Conexão entre dois componentes criada</span>
@@ -242,6 +249,7 @@ function UsingPlatformSection() {
                                     <ImageContainer
                                         width='480'
                                         height='300'
+                                        className='container-img'
                                     >
                                         <img src={imgCriandoFluxos1} alt="Criando fluxos maiores" loading="lazy" />
                                         <span className="legend">Sensor de luz, sensor de temperatura, condicionais E e OU e LED adicionados ao painel de montagem. </span>
@@ -263,6 +271,7 @@ function UsingPlatformSection() {
                                     <ImageContainer
                                         width='480'
                                         height='280'
+                                        className='container-img'
                                     >
                                         <img src={imgCriandoFluxos2} alt="Criacao de fluxo finalizada" loading="lazy" />
                                         <span className="legend">Fluxo criado</span>
@@ -282,7 +291,7 @@ function UsingPlatformSection() {
                         <Row
                             gap='32'
                         >
-                            <MovementFlowContainer>
+                            <MovementFlowContainer >
 
                                 <Column
                                     width='400'
@@ -295,40 +304,42 @@ function UsingPlatformSection() {
                                 </Column>
 
 
-                                <DeleteComponentCard>
-                                    <ImageContainer
-                                        width='150'
-                                        height='150'
-                                    >
-                                        <img src={imgMovendoFluxo1} alt="Alterando valor do componente" loading="lazy" />
-                                        <span className="legend">Sensor de luz recebendo valor 0</span>
-                                    </ImageContainer>
+                                <MovementFlowListCards>
+                                    <MovementFlowCard>
+                                        <ImageContainer
+                                            width='150'
+                                            height='150'
+                                        >
+                                            <img src={imgMovendoFluxo1} alt="Alterando valor do componente" loading="lazy" />
+                                            <span className="legend">Sensor de luz recebendo valor 0</span>
+                                        </ImageContainer>
 
-                                    <ImageContainer
-                                        width='150'
-                                        height='150'
-                                    >
-                                        <img src={imgMovendoFluxo2} alt="Alterando valor do componente" loading="lazy" />
-                                        <span className="legend">Sensor de luz recebendo valor 500.</span>
-                                    </ImageContainer>
-                                </DeleteComponentCard>
+                                        <ImageContainer
+                                            width='150'
+                                            height='150'
+                                        >
+                                            <img src={imgMovendoFluxo2} alt="Alterando valor do componente" loading="lazy" />
+                                            <span className="legend">Sensor de luz recebendo valor 500.</span>
+                                        </ImageContainer>
+                                    </MovementFlowCard>
 
-                                <DeleteComponentCard>
-                                    <ImageContainer
-                                        width='180'
-                                        height='100'
-                                    >
-                                        <img src={imgMovendoFluxo3} alt="Alterando valor do componente" loading="lazy" />
-                                    </ImageContainer>
+                                    <MovementFlowCard>
+                                        <ImageContainer
+                                            width='180'
+                                            height='100'
+                                        >
+                                            <img src={imgMovendoFluxo3} alt="Alterando valor do componente" loading="lazy" />
+                                        </ImageContainer>
 
-                                    <ImageContainer
-                                        width='180'
-                                        height='120'
-                                    >
-                                        <img src={imgMovendoFluxo4} alt="Alterando valor do componente" loading="lazy" />
-                                        <span className="legend">Componente de entrada sensor de luz, ao ter o valor modificado, faz componente de saída LED acender.</span>
-                                    </ImageContainer>
-                                </DeleteComponentCard>
+                                        <ImageContainer
+                                            width='180'
+                                            height='120'
+                                        >
+                                            <img src={imgMovendoFluxo4} alt="Alterando valor do componente" loading="lazy" />
+                                            <span className="legend">Componente de entrada sensor de luz, ao ter o valor modificado, faz componente de saída LED acender.</span>
+                                        </ImageContainer>
+                                    </MovementFlowCard>
+                                </MovementFlowListCards>
 
                             </MovementFlowContainer>
                         </Row>

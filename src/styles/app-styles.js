@@ -16,9 +16,10 @@ const Content = styled.article`
   gap: 8rem;
   margin-top: 8rem;
   padding: 2.4rem 12rem 6.4rem 12rem ;
-  overflow-y: auto;
   transition: all 0.2s ease-in-out;
   scroll-behavior: smooth;
+  overflow-y: auto;
+  overflow-x: hidden;
   z-index: 0;
   &::-webkit-scrollbar {
     width: 8px;
@@ -31,6 +32,16 @@ const Content = styled.article`
   &::-webkit-scrollbar-thumb {
     background-color: var(--red);
     border-radius: 2px;
+  }
+
+  @media (max-width: 960px) {
+    padding: 2.4rem 4.4rem 6.4rem 4.4rem ;
+    
+  }
+
+  @media (max-width: 340px) {
+    padding: 2.4rem 2.4rem 6.4rem 2.4rem ;
+    
   }
 `
 
