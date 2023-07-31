@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const HeaderContainer = styled.section`
+const HeaderContainer = styled.article`
     display: flex;
     flex-direction: column;
     gap: 1.2rem;

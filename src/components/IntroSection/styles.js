@@ -1,11 +1,11 @@
 import styled from "styled-components";
 
-const HomeContainer = styled.section`
+const IntroContainer = styled.section`
   display: flex;
   flex-direction: column;
   gap: 1.2rem;
 `
-const HomeHeader = styled.header`
+const IntroHeader = styled.div`
 
   @media (max-width: 768px) {
     h1{
@@ -15,7 +15,7 @@ const HomeHeader = styled.header`
   }
 `
 
-const HomeContent = styled.section`
+const IntroContent = styled.article`
   display: flex;
   flex-direction: column;
   gap: 3.2rem;
@@ -48,8 +48,8 @@ const YouWillLearnContainer = styled.div`
 
 
 export {
-  HomeContainer,
-  HomeContent,
-  HomeHeader,
+  IntroContainer,
+  IntroContent,
+  IntroHeader,
   YouWillLearnContainer
 }

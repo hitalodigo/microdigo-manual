@@ -13,7 +13,7 @@ const Content = styled.article`
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 8rem;
+  gap: 12rem;
   margin-top: 8rem;
   padding: 2.4rem 12rem 6.4rem 12rem ;
   transition: all 0.2s ease-in-out;

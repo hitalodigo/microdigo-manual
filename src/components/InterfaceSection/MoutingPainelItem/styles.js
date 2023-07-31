@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const MoutingPanelContainer = styled.section`
+const MoutingPanelContainer = styled.article`
     display: flex;
     flex-direction: column;
     gap: 1.2rem;

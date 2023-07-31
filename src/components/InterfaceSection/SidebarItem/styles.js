@@ -1,12 +1,12 @@
 import styled from "styled-components";
 
-const SidebarContainer = styled.section`
+const SidebarContainer = styled.article`
     display: flex;
     flex-direction: column;
     gap: 1.2rem;
 `
 
-const SidebarHeader = styled.header``
+const SidebarHeader = styled.div``
 
 const SidebarContent = styled.div`
     display: flex;

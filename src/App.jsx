@@ -1,15 +1,13 @@
 
 import GlobalStyles from './styles/global';
 
-import SidebarContent from './components/SidebarSection';
-import MoutingPanelSection from './components/MoutingPainelSection';
-import HomeSection from './components/HomeSection';
-import HeaderSection from './components/HeaderSection';
+import IntroSection from './components/IntroSection';
+import InterfaceSection from './components/InterfaceSection';
 import UsingPlatformSection from './components/UsingPlatformSection';
 
 import Header from './components/Header';
 
-import { Container, Content } from './styles/app-styles';
+import * as A from './styles/app-styles';
 
 function App() {
 
@@ -17,23 +15,19 @@ function App() {
     <>
       <GlobalStyles />
 
-      <Container>
+      <A.Container>
 
         <Header />
 
-        <Content>
-          <HomeSection />
+        <A.Content>
+          <IntroSection />
 
-          <HeaderSection />
-
-          <SidebarContent />
-
-          <MoutingPanelSection />
+          <InterfaceSection />
 
           <UsingPlatformSection />
 
-        </Content>
-      </Container>
+        </A.Content>
+      </A.Container>
     </>
   )
 }

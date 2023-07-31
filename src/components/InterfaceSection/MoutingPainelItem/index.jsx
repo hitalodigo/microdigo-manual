@@ -1,47 +1,31 @@
-import imgPainelMontagem from '../../assets/images/painel-montagem/example-painel-montagem.png';
-import imgFluxos from '../../assets/images/painel-montagem/fluxos.png';
-import imgConectoresConexoes from '../../assets/images/painel-montagem/conectores-conexoes.png';
-import imgBotaoZoom from '../../assets/images/botoes/botao-zoom.png';
-import imgZoomIn from '../../assets/images/painel-montagem/zoom-in.png';
-import imgZoomOut from '../../assets/images/painel-montagem/zoom-out.png';
-import imgBotaoFaq from '../../assets/images/botoes/botao-faq.png';
-import imgMovimentacaoEx1 from '../../assets/images/painel-montagem/movimentacao-ex1.png';
-import imgMovimentacaoEx2 from '../../assets/images/painel-montagem/movimentacao-ex2.png';
+import imgPainelMontagem from '@/assets/images/painel-montagem/example-painel-montagem.png';
+import imgFluxos from '@/assets/images/painel-montagem/fluxos.png';
+import imgConectoresConexoes from '@/assets/images/painel-montagem/conectores-conexoes.png';
+import imgBotaoZoom from '@/assets/images/botoes/botao-zoom.png';
+import imgZoomIn from '@/assets/images/painel-montagem/zoom-in.png';
+import imgZoomOut from '@/assets/images/painel-montagem/zoom-out.png';
+import imgBotaoFaq from '@/assets/images/botoes/botao-faq.png';
+import imgMovimentacaoEx1 from '@/assets/images/painel-montagem/movimentacao-ex1.png';
+import imgMovimentacaoEx2 from '@/assets/images/painel-montagem/movimentacao-ex2.png';
 
+import ButtonEnableVideo from '@/components/shared/ButtonEnableVideo';
 
-import {
-    ImageContainer,
-    OrderList,
-    Paragraph,
-    Row,
-    Title,
-    ListItem,
-    Column
-} from "../../styles/common";
-import {
-    MoutingPanelContainer,
-    MoutingPanelHeader,
-    MoutingPanelContent,
-    MoutingPanelListCard,
-    MoutingPanelCard,
-    ZoomContainer,
-    MovimentationContainer
-} from "./styles";
+import * as C from "@/styles/common";
+import * as M from "./styles";
 
-
-function MoutingPanelSection() {
+function MoutingPanelItem() {
 
     return (
-        <MoutingPanelContainer id='mouting-panel-section'>
-            <MoutingPanelHeader>
-                <Title size='40'>Painel de montagem</Title>
-            </MoutingPanelHeader>
+        <M.MoutingPanelContainer id='mouting-panel-section'>
+            <M.MoutingPanelHeader>
+                <C.Title size='32'>Painel de montagem</C.Title>
+            </M.MoutingPanelHeader>
 
-            <MoutingPanelContent>
-                <Row gap='12'>
-                    <Paragraph size='16'>Esta é a área onde serão criados os fluxos. </ Paragraph>
+            <M.MoutingPanelContent>
+                <C.Row gap='12'>
+                    <C.Paragraph size='16'>Esta é a área onde serão criados os fluxos. </ C.Paragraph>
 
-                    <ImageContainer
+                    <C.ImageContainer
                         width='100%'
                         height='100%'
                     >
@@ -51,19 +35,22 @@ function MoutingPanelSection() {
                             loading="lazy"
                         />
                         <span className="legend">Painel de montagem</span>
-                    </ImageContainer>
-                </Row>
+                    </C.ImageContainer>
 
-                <OrderList gap='80'>
-                    <ListItem>
-                        <Row
+                    <ButtonEnableVideo text={'Painel de montagem'} />
+
+                </C.Row>
+
+                <C.OrderList gap='80'>
+                    <C.ListItem >
+                        <C.Row
                             gap='24'
                         >
-                            <Title size='24'>Fluxos</Title>
+                            <C.Title size='24'>Fluxos</C.Title>
 
-                            <MoutingPanelListCard>
-                                <MoutingPanelCard>
-                                    <ImageContainer
+                            <M.MoutingPanelListCard>
+                                <M.MoutingPanelCard>
+                                    <C.ImageContainer
                                         width='100%'
                                         height='100%'
                                     >
@@ -73,15 +60,15 @@ function MoutingPanelSection() {
                                             loading="lazy"
                                         />
                                         <span className="legend">Representação dos fluxos</span>
-                                    </ImageContainer>
-                                    <Paragraph size='14'>
+                                    </C.ImageContainer>
+                                    <C.Paragraph size='14'>
                                         Um fluxo sempre será montado pelo usuário no painel de montagem. Pode ser descrito como o processamento de certa informação, portanto, após a criação da lógica o usuário deverá passar ao computador certo dado, que será processado e então devolvido. Um fluxo sempre iniciará a partir de um componente de entrada e terminará em um de saída.
-                                    </ Paragraph>
+                                    </ C.Paragraph>
 
-                                </MoutingPanelCard>
+                                </M.MoutingPanelCard>
 
-                                <MoutingPanelCard>
-                                    <ImageContainer
+                                <M.MoutingPanelCard>
+                                    <C.ImageContainer
                                         width='100%'
                                         height='100%'
                                     >
@@ -92,31 +79,34 @@ function MoutingPanelSection() {
                                         />
 
                                         <span className="legend">Conexão e conectores</span>
-                                    </ImageContainer>
+                                    </C.ImageContainer>
 
-                                    <Paragraph size='14'>
+                                    <C.Paragraph size='14'>
                                         Quando arrastar um componente da barra lateral ao painel de montagem este irá ter um conector, representado por um pequeno ponto ao lado direito, esquerdo ou em ambos os lados, e é por meio deles que serão feitas as conexões. Um conector à direita tem função de transmitir algum dado, enquanto um à esquerda irá recebê-lo, portanto, os fluxos sempre serão feitos a partir da junção desses dois conectores, estando ambos em elementos diferentes.
-                                    </ Paragraph>
-                                </MoutingPanelCard>
-                            </MoutingPanelListCard>
+                                    </ C.Paragraph>
+                                </M.MoutingPanelCard>
+                            </M.MoutingPanelListCard>
 
-                        </Row>
-                    </ListItem>
+                            <ButtonEnableVideo text={'Fluxos, conectores e conexões'} />
 
-                    <ListItem>
-                        <Row
+                        </C.Row>
+                    </C.ListItem>
+
+                    <C.ListItem>
+                        <C.Title size='20'>Zoom e Faq</C.Title>
+
+                        <C.Row
                             gap='12'
                         >
-                            <Title size='20'>Zoom</Title>
 
 
-                            <ZoomContainer>
+                            <M.ZoomContainer>
 
-                                <Column gap='24'>
-                                    <Paragraph size='16'>
+                                <C.Column gap='24'>
+                                    <C.Paragraph size='16'>
                                         Ao selecionar o botão de zoom, no canto direito inferior da tela, um slider se tornará visível à direita da interface; ao arrastá-lo é possível aproximar e afastar os componentes.
-                                    </ Paragraph>
-                                    <ImageContainer
+                                    </ C.Paragraph>
+                                    <C.ImageContainer
                                         width='100'
                                         height='100'
                                     >
@@ -127,11 +117,11 @@ function MoutingPanelSection() {
                                             title="Botão de zoom"
                                         />
 
-                                    </ImageContainer>
-                                </Column>
+                                    </C.ImageContainer>
+                                </C.Column>
 
-                                <Column gap='24'>
-                                    <ImageContainer
+                                <C.Column gap='24'>
+                                    <C.ImageContainer
                                         width='400'
                                         height='220'
                                         className='container-img'
@@ -143,9 +133,9 @@ function MoutingPanelSection() {
                                             title="Zoom in"
                                         />
                                         <span className="legend">Exemplo de zoom mínimo</span>
-                                    </ImageContainer>
+                                    </C.ImageContainer>
 
-                                    <ImageContainer
+                                    <C.ImageContainer
                                         width='400'
                                         height='220'
                                         className='container-img'
@@ -159,24 +149,22 @@ function MoutingPanelSection() {
 
                                         <span className="legend">Exemplo de zoom máximo</span>
 
-                                    </ImageContainer>
-                                </Column>
-                            </ZoomContainer>
-                        </Row>
+                                    </C.ImageContainer>
 
-                    </ListItem>
 
-                    <ListItem>
-                        <Row
+                                </C.Column>
+                            </M.ZoomContainer>
+                        </C.Row>
+
+                        <C.Row
                             gap='12'
                         >
-                            <Title size='20'>FAQ</Title>
 
-                            <Paragraph size='16'>
+                            <C.Paragraph size='16'>
                                 Do inglês “Frequently Asked Questions”, que significa basicamente perguntas frequentes, ao selecionar este botão aparecerá uma área de perguntas e respostas para sanar possíveis dúvidas em relação ao funcionamento da plataforma.
-                            </ Paragraph>
+                            </ C.Paragraph>
 
-                            <ImageContainer
+                            <C.ImageContainer
                                 width='100'
                                 height='100'
                             >
@@ -187,19 +175,21 @@ function MoutingPanelSection() {
                                     title="Botão de faq"
                                 />
 
-                            </ImageContainer>
-                        </Row>
-                    </ListItem>
+                            </C.ImageContainer>
+                        </C.Row>
 
-                    <ListItem>
-                        <Row gap='12'>
-                            <Title size='20'>Movimentação</Title>
-                            <Paragraph size='14'>
+                        <ButtonEnableVideo text={'Zoom e FAQ'} />
+                    </C.ListItem>
+
+                    <C.ListItem>
+                        <C.Row gap='12'>
+                            <C.Title size='20'>Movimentação</C.Title>
+                            <C.Paragraph size='14'>
                                 É possível clicar e arrastar a área em branco e assim se mover pelo painel de montagem.
-                            </Paragraph>
+                            </C.Paragraph>
 
-                            <MovimentationContainer>
-                                <ImageContainer
+                            <M.MovimentationContainer>
+                                <C.ImageContainer
                                     width='50%'
                                     height='50%'
                                     className='container-img'
@@ -211,9 +201,9 @@ function MoutingPanelSection() {
                                         title="Botão de faq"
                                     />
 
-                                </ImageContainer>
+                                </C.ImageContainer>
 
-                                <ImageContainer
+                                <C.ImageContainer
                                     width='50%'
                                     height='50%'
                                     className='container-img'
@@ -225,15 +215,18 @@ function MoutingPanelSection() {
                                         title="Botão de faq"
                                     />
 
-                                </ImageContainer>
-                            </MovimentationContainer>
-                        </Row>
-                    </ListItem>
-                </OrderList>
+                                </C.ImageContainer>
+                            </M.MovimentationContainer>
 
-            </MoutingPanelContent>
-        </MoutingPanelContainer>
+                            <ButtonEnableVideo text={'Movimentação'} />
+
+                        </C.Row>
+                    </C.ListItem>
+                </C.OrderList>
+
+            </M.MoutingPanelContent>
+        </M.MoutingPanelContainer>
     )
 }
 
-export default MoutingPanelSection;
+export default MoutingPanelItem;

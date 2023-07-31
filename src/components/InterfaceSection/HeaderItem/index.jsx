@@ -1,48 +1,47 @@
-import imgHeader from '../../assets/images/cabecalho/example-cabecalho.png';
+import imgHeader from '@/assets/images/cabecalho/example-cabecalho.png';
 
-import {
-    Row,
-    Title,
-    ImageContainer,
-    Paragraph
-} from "../../styles/common";
+import * as C from "@/styles/common";
+import ButtonEnableVideo from '@/components/shared/ButtonEnableVideo';
+
 import { HeaderContainer, HeaderContent, Header } from './styles'
 
-function HeaderSection() {
+function HeaderItem() {
 
     return (
         <HeaderContainer>
 
             <Header>
-                <Title
-                    size='40'
+                <C.Title
+                    size='32'
                     id='header-section'
                 >
                     Cabeçalho
-                </Title>
+                </C.Title>
             </Header>
 
             <HeaderContent>
-                <Row
+                <C.Row
                     gap='24'
                 >
-                    <Paragraph size='16'>
+                    <C.Paragraph size='16'>
                         Parte superior em azul na interface, onde se encontra a logo da Microdigo. Atualmente não contém nenhuma função.
-                    </Paragraph>
-                    <ImageContainer
+                    </C.Paragraph>
+                    <C.ImageContainer
                         width="100%"
                         height="100%"
                     >
                         <img src={imgHeader} alt="Imagem do cabeçalho" loading="lazy" />
                         <span className="legend">Cabeçalho em destaque na cor azul</span>
-                    </ImageContainer>
+                    </C.ImageContainer>
 
-                </Row>
+                </C.Row>
+
 
             </HeaderContent>
 
+            <ButtonEnableVideo text={'Cabeçalho'} />
         </HeaderContainer>
     )
 }
 
-export default HeaderSection;
+export default HeaderItem;

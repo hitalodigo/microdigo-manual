@@ -1,24 +1,20 @@
-import {
-    HomeContainer,
-    HomeHeader,
-    HomeContent,
-    YouWillLearnContainer
-} from "./styles";
+import * as I from "./styles";
 import { Paragraph, Row, Title } from '../../styles/common'
 
-function HomeSection() {
+function IntroSection() {
+
     return (
-        <HomeContainer>
-            <HomeHeader>
+        <I.IntroContainer>
+            <I.IntroHeader>
                 <Title
                     id="home"
                     size='48'
                 >
                     Bem-vindo ao manual da plataforma microdigo!
                 </Title>
-            </HomeHeader>
+            </I.IntroHeader>
 
-            <HomeContent>
+            <I.IntroContent>
                 <Row
                     gap='12'
                 >
@@ -29,7 +25,7 @@ function HomeSection() {
 
                     <Paragraph size='16'>Recomendamos também que para melhor utilizar a plataforma, esteja em uma conexão de internet estável e utilize os navegadores <strong>Google Chrome</strong>, <strong>Microsoft Edge</strong> ou <strong>Opera</strong>.</ Paragraph>
                 </Row>
-                <YouWillLearnContainer>
+                <I.YouWillLearnContainer>
                     <h2>Você vai aprender</h2>
                     <ul>
                         <li>O que é o elemento Cabeçalho</li>
@@ -45,11 +41,11 @@ function HomeSection() {
                         <li>Como criar fluxos</li>
                         <li>Como manusear fluxos criados</li>
                     </ul>
-                </YouWillLearnContainer>
-            </HomeContent>
+                </I.YouWillLearnContainer>
+            </I.IntroContent>
 
-        </HomeContainer>
+        </I.IntroContainer>
     )
 }
 
-export default HomeSection;
+export default IntroSection;

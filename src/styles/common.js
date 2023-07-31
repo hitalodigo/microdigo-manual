@@ -71,14 +71,28 @@ const DesorderList = styled.ul`
     padding-left: 4rem;
 `
 
-const ListItem = styled.li` 
+const ListItem = styled.li`     
     font-size: 2rem;
 
     > h1 + div{
         margin-top: 3.2rem;
     }
 
+    > div + div,
+    button:last-child{
+        margin-top: ${({ lastChildMarginTop }) => lastChildMarginTop ? `${lastChildMarginTop / 10}rem` : '4.4rem'};
+    }
+
 `
+
+const SequencyNumber = styled.span`
+    width: 100%;
+    font-size: 2.4rem;
+    font-weight: bold;
+    text-align: center;
+    color: var(--red);
+`
+
 
 export {
     Title,
@@ -88,5 +102,6 @@ export {
     ImageContainer,
     OrderList,
     DesorderList,
-    ListItem
+    ListItem,
+    SequencyNumber
 }
