@@ -17,11 +17,11 @@ export const Container = styled.button`
     transition: filter 0.3s ease-in-out;
 
     &:hover{
-        
+
         > div:first-child{
-        
-            background-color: var(--blue);
-            
+
+            background-color: var(--red);
+
             svg{
                 color: var(--white);
             }
@@ -31,7 +31,7 @@ export const Container = styled.button`
 `
 
 export const Content = styled.div`
-    
+
 `
 
 export const Icon = styled.div`
@@ -54,7 +54,11 @@ export const Icon = styled.div`
         transition: color 0.3s ease-in-out;
     }
 
-
+    @media (max-width:480px) {
+      width: 7.2rem;
+      height: 7.2rem;
+      left: -0.4rem;
+    }
 `
 
 export const TitleContainer = styled.div`
@@ -62,7 +66,12 @@ export const TitleContainer = styled.div`
     font-size: 2rem;
     white-space: nowrap;
     border-radius: 0 4px 4px 0;
-    background-color: var(--red);
+    background-color: var(--blue);
+
+    @media (max-width:480px) {
+      font-size: 1.4rem;
+      padding: 0.8rem 2.4rem;
+    }
 `
 
 export const SubtitleContainer = styled.div`
@@ -71,4 +80,8 @@ export const SubtitleContainer = styled.div`
     font-size: 1.4rem;
     border-radius: 0 4px 0 0;
     background-color: var(--black);
+
+    @media (max-width:480px) {
+      font-size: 1.2rem;
+    }
 `

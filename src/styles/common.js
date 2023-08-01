@@ -1,13 +1,69 @@
 import styled from "styled-components";
 
 const imageAlignTypes = {
-    'left': () => '0 auto 0 0',
-    'right': () => '0 0 0 auto',
-    'center': () => '0 auto'
+  'left': () => '0 auto 0 0',
+  'right': () => '0 0 0 auto',
+  'center': () => '0 auto'
 }
 
 const Title = styled.h1`
-    font-size: ${(props) => props.size ? `${props.size / 10}rem` : 0};
+    font-size: 4.8rem;
+
+    @media (max-width: 768px) {
+      font-size: 4rem;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 3rem;
+    }
+`
+
+const Title2 = styled.h2`
+    font-size: 4rem;
+
+    @media (max-width: 768px) {
+      font-size: 3.2rem;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 2.8rem;
+    }
+`
+
+const Title3 = styled.h3`
+    font-size: 3.2rem;
+
+    @media (max-width: 768px) {
+      font-size: 2.8rem;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 2.4rem;
+    }
+`
+
+const Title4 = styled.h4`
+    font-size:2.8rem;
+
+    @media (max-width: 768px) {
+      font-size: 2.4rem;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 2rem;
+    }
+`
+
+const Title5 = styled.h5`
+    font-size: 2.4rem;
+
+    @media (max-width: 768px) {
+      font-size: 2rem;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 1.8rem;
+    }
 `
 
 const Row = styled.div`
@@ -27,7 +83,7 @@ const Column = styled.div`
     gap: ${({ gap }) => gap ? `${gap / 10}rem` : 0};
 `
 
-const Paragraph = styled.p`     
+const Paragraph = styled.p`
     font-size: ${({ size }) => size ? `${size / 10}rem` : 0};
     text-align: ${({ textAlign }) => textAlign ? textAlign : 'initial'};
 `
@@ -38,14 +94,14 @@ const ImageContainer = styled.div`
     width: ${(props) => props.width ? `${props.width / 10}rem` : 0};
     height: ${(props) => props.height ? `${props.height / 10}rem` : 0};
     margin: ${({ align }) => {
-        const typeAlign = imageAlignTypes[align];
+    const typeAlign = imageAlignTypes[align];
 
-        if (!typeAlign) return '0 auto';
+    if (!typeAlign) return '0 auto';
 
-        return typeAlign();
-    }};
+    return typeAlign();
+  }};
     gap:1.2rem;
-    
+
     img{
         width: 100%;
         height: 100%;
@@ -57,6 +113,7 @@ const ImageContainer = styled.div`
         text-align: center;
         font-weight: bold;
     }
+
 `
 
 const OrderList = styled.ol`
@@ -71,10 +128,14 @@ const DesorderList = styled.ul`
     padding-left: 4rem;
 `
 
-const ListItem = styled.li`     
+const ListItem = styled.li`
     font-size: 2rem;
 
-    > h1 + div{
+    > h1 + div,
+    > h2 + div,
+    > h3 + div,
+    > h4 + div,
+    > h5 + div{
         margin-top: 3.2rem;
     }
 
@@ -92,16 +153,26 @@ const SequencyNumber = styled.span`
     text-align: center;
     color: var(--red);
 `
+const IframeContainer = styled.div`
+  position: relative;
+  width: 100%;
+  height: fit-content;
+`
 
 
 export {
-    Title,
-    Row,
-    Column,
-    Paragraph,
-    ImageContainer,
-    OrderList,
-    DesorderList,
-    ListItem,
-    SequencyNumber
+  Title,
+  Title2,
+  Title3,
+  Title4,
+  Title5,
+  Row,
+  Column,
+  Paragraph,
+  ImageContainer,
+  OrderList,
+  DesorderList,
+  ListItem,
+  SequencyNumber,
+  IframeContainer
 }

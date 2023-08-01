@@ -26,10 +26,9 @@ const MoutingPanelContent = styled.section`
     gap: 6.4rem;
 
     @media (max-width:620px) {
-        
+
         ol{
             padding-left: 2rem;
-
         }
     }
 `;
@@ -100,11 +99,11 @@ const MovimentationContainer = styled.div`
 `
 
 export {
-    MoutingPanelContainer,
-    MoutingPanelHeader,
-    MoutingPanelContent,
-    MoutingPanelListCard,
-    MoutingPanelCard,
-    ZoomContainer,
-    MovimentationContainer
+  MoutingPanelContainer,
+  MoutingPanelHeader,
+  MoutingPanelContent,
+  MoutingPanelListCard,
+  MoutingPanelCard,
+  ZoomContainer,
+  MovimentationContainer
 }

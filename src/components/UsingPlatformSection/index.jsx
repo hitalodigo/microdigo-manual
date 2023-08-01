@@ -3,45 +3,47 @@ import CreateConnectionsSection from './CreateConnectionsSection';
 import DeleteConnectionsSections from './DeleteConnectionsSection';
 import CreateFlowsSection from './CreateFlowsSection';
 import MovementFlowsSection from './MovementFlowsSection';
+import IframeVideoTutorial from '@/components/shared/IframeVideoTutorial';
 
 import * as C from "@/styles/common";
 import * as U from "./styles";
 
 function UsingPlatformSection() {
 
-    return (
-        <U.UsingPlatformContainer id='using-platform-section'>
-            <C.Title size='40'>
-                Usando a plataforma microdigo
-            </C.Title>
+  return (
+    <U.UsingPlatformContainer id='using-platform-section'>
+      <C.Title2>
+        Usando a plataforma microdigo
+      </C.Title2>
 
-            <U.UsingPlatformContent>
+      <U.UsingPlatformContent>
 
-                <iframe
-                    src="https://www.youtube.com/embed/KwnIp1YjPz0"
-                    frameBorder="0"
-                    width='100%'
-                    height={600}
-                ></iframe>
+        <C.IframeContainer>
+          <IframeVideoTutorial
+            url={"https://www.youtube.com/embed/KwnIp1YjPz0"}
+            initialWidth={'100%'}
+            initialHeight={'600px'}
+          />
+        </C.IframeContainer>
 
-                <C.OrderList gap='64'>
+        <C.OrderList gap='64'>
 
-                    <AddComponentsSection />
+          <AddComponentsSection />
 
-                    <CreateConnectionsSection />
+          <CreateConnectionsSection />
 
-                    <DeleteConnectionsSections />
+          <DeleteConnectionsSections />
 
-                    <CreateFlowsSection />
+          <CreateFlowsSection />
 
-                    <MovementFlowsSection />
+          <MovementFlowsSection />
 
-                </C.OrderList>
+        </C.OrderList>
 
-            </U.UsingPlatformContent>
+      </U.UsingPlatformContent>
 
-        </U.UsingPlatformContainer>
-    )
+    </U.UsingPlatformContainer>
+  )
 }
 
 export default UsingPlatformSection;

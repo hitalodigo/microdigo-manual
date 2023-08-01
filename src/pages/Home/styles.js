@@ -13,7 +13,7 @@ const Content = styled.article`
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 12rem;
+  gap: 6.4rem;
   margin-top: 8rem;
   padding: 2.4rem 12rem 6.4rem 12rem ;
   transition: all 0.2s ease-in-out;
@@ -36,12 +36,20 @@ const Content = styled.article`
 
   @media (max-width: 960px) {
     padding: 2.4rem 4.4rem 6.4rem 4.4rem ;
-    
+
+  }
+
+  @media (max-width: 768px) {
+    gap: 8rem;
+  }
+
+  @media (max-width: 480px) {
+    padding: 2.4rem 2.4rem 6.4rem 2.4rem ;
   }
 
   @media (max-width: 340px) {
     padding: 2.4rem 2.4rem 6.4rem 2.4rem ;
-    
+
   }
 `
 

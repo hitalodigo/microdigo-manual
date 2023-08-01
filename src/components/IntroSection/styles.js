@@ -5,15 +5,8 @@ const IntroContainer = styled.section`
   flex-direction: column;
   gap: 1.2rem;
 `
-const IntroHeader = styled.div`
 
-  @media (max-width: 768px) {
-    h1{
-    font-size: 3.2rem;
-
-    }
-  }
-`
+const IntroHeader = styled.header``
 
 const IntroContent = styled.article`
   display: flex;
@@ -39,9 +32,9 @@ const YouWillLearnContainer = styled.div`
     display: flex;
     flex-direction: column;
     gap: 0.8rem;
-    
-    li{ 
-        list-style: inside; 
+
+    li{
+        list-style: inside;
     }
   }
 `

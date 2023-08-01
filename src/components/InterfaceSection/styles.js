@@ -7,7 +7,10 @@ export const InterfaceSectionContainer = styled.section`
 `
 
 export const InterfaceSectionContent = styled.div`
+    position: relative;
     display: flex;
     flex-direction: column;
     gap: 8rem;
+
 `
+

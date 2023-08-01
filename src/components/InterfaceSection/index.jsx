@@ -1,33 +1,36 @@
 import HeaderItem from "./HeaderItem";
 import MoutingPanelItem from "./MoutingPainelItem";
 import SidebarItem from "./SidebarItem";
+import IframeVideoTutorial from "@/components/shared/IframeVideoTutorial";
 
 import * as C from '@/styles/common';
 import * as I from './styles';
 
 const InterfaceSection = () => {
-    return (
-        <I.InterfaceSectionContainer>
+  return (
+    <I.InterfaceSectionContainer>
 
-            <C.Title size='40'>Interface</C.Title>
+      <C.Title2 >Interface</C.Title2>
 
-            <I.InterfaceSectionContent>
-                <iframe
-                    src="https://www.youtube.com/embed/KwnIp1YjPz0"
-                    frameBorder="0"
-                    width='100%'
-                    height={600}
-                ></iframe>
+      <I.InterfaceSectionContent>
 
-                <HeaderItem />
+        <C.IframeContainer>
+          <IframeVideoTutorial
+            url={"https://www.youtube.com/embed/KwnIp1YjPz0"}
+            initialWidth={'100%'}
+            initialHeight={'600px'}
+          />
+        </C.IframeContainer>
 
-                <SidebarItem />
+        <HeaderItem />
 
-                <MoutingPanelItem />
-            </I.InterfaceSectionContent>
+        <SidebarItem />
 
-        </I.InterfaceSectionContainer>
-    );
+        <MoutingPanelItem />
+      </I.InterfaceSectionContent>
+
+    </I.InterfaceSectionContainer>
+  );
 };
 
 export default InterfaceSection;

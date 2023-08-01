@@ -13,16 +13,25 @@ const HeaderContainer = styled.header`
     padding: 0 4.4rem;
     background-color: var(--blue);
     z-index: 1;
+
+    @media (max-width: 768px) {
+      height: 6rem;
+    }
 `
 
 
 const LogoContainer = styled.div`
   width: 15rem;
   height: 6rem;
-  
+
   img{
     width: 100%;
     height: 100%;
+  }
+
+  @media (max-width:768px) {
+    width: 12rem;
+    height: 6rem;
   }
 `
 
@@ -43,7 +52,7 @@ const MenuList = styled.ul`
     justify-content: center;
     gap: 0;
     z-index: 10;
-    
+
     background-color: rgb(40, 40, 50, 0.5);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
@@ -113,7 +122,7 @@ const MenuIcon = styled.div`
     height: 0.5rem;
     border-radius: 8px;
     background-color: var(--white);
-    transition: transform 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
   }
 
   &::before{
@@ -139,6 +148,33 @@ const MenuIcon = styled.div`
 
   @media (max-width: 968px){
     display: block;
+  }
+
+  @media (max-width: 768px) {
+    width: 3rem;
+    height: 0.3rem;
+
+    &::before,
+    &::after{
+      width: 3rem;
+      height: 0.3rem;
+    }
+
+    &::before{
+      top: -0.8rem;
+    }
+
+    &::after{
+      top:0.8rem;
+    }
+
+    &.isActive::before{
+      transform: translate(0%, 200%) rotate(-315deg);
+    }
+
+    &.isActive::after{
+      transform: translate(0%, -345%) rotate(315deg);
+    }
   }
 
 `

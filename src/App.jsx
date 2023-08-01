@@ -1,34 +1,24 @@
+import { useEffect } from 'react';
+import Modal from 'react-modal';
+
+import { ModalProvider } from '@/contexts/ModalContext';
 
 import GlobalStyles from './styles/global';
+import Home from './pages/Home';
 
-import IntroSection from './components/IntroSection';
-import InterfaceSection from './components/InterfaceSection';
-import UsingPlatformSection from './components/UsingPlatformSection';
 
-import Header from './components/Header';
-
-import * as A from './styles/app-styles';
+Modal.setAppElement('#root');
 
 function App() {
 
+
   return (
-    <>
+    <ModalProvider>
+
       <GlobalStyles />
 
-      <A.Container>
-
-        <Header />
-
-        <A.Content>
-          <IntroSection />
-
-          <InterfaceSection />
-
-          <UsingPlatformSection />
-
-        </A.Content>
-      </A.Container>
-    </>
+      <Home />
+    </ModalProvider>
   )
 }
 

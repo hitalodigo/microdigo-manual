@@ -18,9 +18,13 @@ const UsingPlatformContent = styled.section`
         }
     }
 
+    @media (max-width: 768px) {
+      gap: 4.4rem;
+    }
+
 `
 
 export {
-    UsingPlatformContainer,
-    UsingPlatformContent,
+  UsingPlatformContainer,
+  UsingPlatformContent,
 }
