@@ -24,7 +24,6 @@ const IframeVideoTutorial = ({ url, initialWidth, initialHeight }) => {
         width={initialWidth}
         height={initialHeight}
         onLoad={handleLoadIframe}
-        on
       ></I.Container>
 
     </>

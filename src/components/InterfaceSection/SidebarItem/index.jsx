@@ -12,7 +12,7 @@ import * as S from "./styles";
 
 function SidebarItem() {
   return (
-    <S.SidebarContainer id='sidebar-section'>
+    <S.SidebarContainer id='sidebar'>
       <S.SidebarHeader>
         <C.Title3
           size='32'
@@ -66,11 +66,14 @@ function SidebarItem() {
 
           </S.SidebarExampleContainer>
 
-          <ButtonEnableVideo text={'Barra lateral'} />
+          <ButtonEnableVideo
+            text={'Barra lateral'}
+            url={'https://www.youtube.com/embed/g1jgIeOswNE'}
+          />
 
         </C.Row>
 
-        <C.Row>
+        <C.Row id='components-type'>
           <S.ButtonDescriptionContainer>
             <S.ButtonDescriptionItem
               className='entry'
@@ -137,9 +140,14 @@ function SidebarItem() {
             </S.ButtonDescriptionItem>
           </S.ButtonDescriptionContainer>
 
-          <ButtonEnableVideo text={'Tipos de componentes'} />
 
         </C.Row>
+
+        <ButtonEnableVideo
+          text={'Tipos de componentes'}
+          url={'https://www.youtube.com/embed/lvsbesTfx-Y'}
+        />
+
       </S.SidebarContent>
 
 

@@ -9,7 +9,10 @@ import * as CC from './styles';
 
 const CreateConnectionsSection = () => {
   return (
-    <C.ListItem lastChildMarginTop='64'>
+    <C.ListItem
+      lastChildMarginTop='64'
+      id='creation-connections'
+    >
       <C.Title3>Criando conexões</C.Title3>
       <C.Row
         gap='32'

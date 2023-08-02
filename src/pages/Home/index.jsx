@@ -1,6 +1,4 @@
-import { useEffect } from 'react';
 
-import { useModal } from '@/hooks/useModal';
 import IntroSection from '@/components/IntroSection';
 import InterfaceSection from '@/components/InterfaceSection';
 import UsingPlatformSection from '@/components/UsingPlatformSection';
@@ -10,15 +8,6 @@ import * as A from './styles';
 
 const Home = () => {
 
-  const { enableModal } = useModal();
-
-
-  useEffect(() => {
-    enableModal({
-      typeContent: 'video-tutorial',
-      title: `Vídeo tutorial - Introdução`
-    })
-  }, []);
 
   return (
     <>

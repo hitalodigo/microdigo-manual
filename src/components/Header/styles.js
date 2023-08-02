@@ -1,7 +1,8 @@
+
 import styled from "styled-components";
 
 
-const HeaderContainer = styled.header`
+export const HeaderContainer = styled.header`
     position: fixed;
     top: 0;
     left: 0;
@@ -9,19 +10,16 @@ const HeaderContainer = styled.header`
     display: flex;
     align-items: center;
     gap: 4.4rem;
-    height: 8rem;
+    height: 6rem;
     padding: 0 4.4rem;
     background-color: var(--blue);
     z-index: 1;
 
-    @media (max-width: 768px) {
-      height: 6rem;
-    }
 `
 
 
-const LogoContainer = styled.div`
-  width: 15rem;
+export const LogoContainer = styled.div`
+  width: 12rem;
   height: 6rem;
 
   img{
@@ -29,13 +27,9 @@ const LogoContainer = styled.div`
     height: 100%;
   }
 
-  @media (max-width:768px) {
-    width: 12rem;
-    height: 6rem;
-  }
 `
 
-const MenuList = styled.ul`
+export const MenuList = styled.ul`
   position: relative;
   display: flex;
   align-items: center;
@@ -49,36 +43,54 @@ const MenuList = styled.ul`
     height: 100vh;
     display: ${(props) => props.isActive ? 'flex' : 'none'};
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     gap: 0;
-    z-index: 10;
-
+    padding: 3.2rem 0;
     background-color: rgb(40, 40, 50, 0.5);
+
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
+    z-index: 10;
+    overflow: auto;
   }
 `
 
-const MenuItem = styled.li`
+export const MenuItem = styled.li`
   position: relative;
   width: 100%;
+  height: fit-content;
   display: flex;
   justify-content: center;
+  align-items: center;
   cursor: pointer;
   background-color: ${({ linkActive }) => linkActive ? 'var(--blue)' : 'transparent'};
   transition: background-color 0.2s ease-in;
+  z-index: 10;
 
-  a{
+
+  @media (max-width: 968px) {
     display: flex;
-    font-size: 1.6rem;
-    white-space: nowrap;
-    color: var(--white);
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
   }
+`
+
+export const MenuLink = styled.a`
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 6rem;
+  font-size: 1.6rem;
+  white-space: nowrap;
+  color: var(--white);
 
   &::after{
     content: '';
     position: absolute;
-    bottom: -0.4rem;
+    bottom: 1.6rem;
     width: 0%;
     height: 0.2rem;
     border-radius: 8px;
@@ -92,18 +104,15 @@ const MenuItem = styled.li`
   }
 
   @media (max-width: 968px) {
-    padding: 2.4rem 0;
     &::after{
       display: none;
     }
 
-    &:hover{
-      background-color: var(--blue);
-    }
   }
+
 `
 
-const MenuIcon = styled.div`
+export const MenuIcon = styled.div`
   display: none;
   position: relative;
   width: 4rem;
@@ -178,11 +187,3 @@ const MenuIcon = styled.div`
   }
 
 `
-
-export {
-  HeaderContainer,
-  LogoContainer,
-  MenuList,
-  MenuItem,
-  MenuIcon
-}

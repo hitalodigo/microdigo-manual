@@ -12,7 +12,7 @@ function HeaderItem() {
 
       <Header>
         <C.Title3
-          id='header-section'
+          id='header'
         >
           Cabeçalho
         </C.Title3>
@@ -38,7 +38,10 @@ function HeaderItem() {
 
       </HeaderContent>
 
-      <ButtonEnableVideo text={'Cabeçalho'} />
+      <ButtonEnableVideo
+        text={'Cabeçalho'}
+        url={'https://www.youtube.com/embed/q5ZO5ndul3A'}
+      />
     </HeaderContainer>
   )
 }

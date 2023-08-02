@@ -4,7 +4,7 @@ import { useModal } from '@/hooks/useModal';
 
 import *  as Btn from './styles';
 
-const ButtonEnableVideo = ({ text }) => {
+const ButtonEnableVideo = ({ text, url }) => {
 
   const { enableModal } = useModal();
 
@@ -13,7 +13,8 @@ const ButtonEnableVideo = ({ text }) => {
       onClick={() => {
         enableModal({
           typeContent: 'video-tutorial',
-          title: `Vídeo tutorial - ${text}`
+          title: `Vídeo tutorial - ${text}`,
+          url
         })
       }}
     >

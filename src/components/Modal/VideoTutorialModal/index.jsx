@@ -7,7 +7,7 @@ import * as V from './styles';
 
 const VideoTutorialModal = ({ contentData }) => {
 
-  const { title } = contentData;
+  const { title, url } = contentData;
 
   const [isLoading, setIsLoading] = useState(true);
 
@@ -30,7 +30,7 @@ const VideoTutorialModal = ({ contentData }) => {
           )
         }
         <iframe
-          src="https://www.youtube.com/embed/KwnIp1YjPz0"
+          src={url}
           frameBorder="0"
           width='100%'
           height='460px'

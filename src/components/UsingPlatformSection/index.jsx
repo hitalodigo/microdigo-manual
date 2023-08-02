@@ -11,7 +11,7 @@ import * as U from "./styles";
 function UsingPlatformSection() {
 
   return (
-    <U.UsingPlatformContainer id='using-platform-section'>
+    <U.UsingPlatformContainer id='using-platform'>
       <C.Title2>
         Usando a plataforma microdigo
       </C.Title2>
@@ -20,7 +20,7 @@ function UsingPlatformSection() {
 
         <C.IframeContainer>
           <IframeVideoTutorial
-            url={"https://www.youtube.com/embed/KwnIp1YjPz0"}
+            url={"https://www.youtube.com/embed/8SpApaM97gw"}
             initialWidth={'100%'}
             initialHeight={'600px'}
           />

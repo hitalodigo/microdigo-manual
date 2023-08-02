@@ -13,8 +13,8 @@ const Content = styled.article`
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 6.4rem;
-  margin-top: 8rem;
+  gap: 8rem;
+  margin-top: 6rem;
   padding: 2.4rem 12rem 6.4rem 12rem ;
   transition: all 0.2s ease-in-out;
   scroll-behavior: smooth;

@@ -16,7 +16,7 @@ import * as M from "./styles";
 function MoutingPanelItem() {
 
   return (
-    <M.MoutingPanelContainer id='mouting-panel-section'>
+    <M.MoutingPanelContainer id='mouting-panel'>
       <M.MoutingPanelHeader>
         <C.Title3>Painel de montagem</C.Title3>
       </M.MoutingPanelHeader>
@@ -37,14 +37,18 @@ function MoutingPanelItem() {
             <span className="legend">Painel de montagem</span>
           </C.ImageContainer>
 
-          <ButtonEnableVideo text={'Painel de montagem'} />
+          <ButtonEnableVideo
+            text={'Painel de montagem'}
+            url={'https://www.youtube.com/embed/67py8B5ieZM'}
+          />
 
         </C.Row>
 
         <C.OrderList gap='80'>
-          <C.ListItem >
+          <C.ListItem id='flows-connectors-connections'>
             <C.Row
               gap='24'
+
             >
               <C.Title4 >Fluxos</C.Title4>
 
@@ -87,12 +91,15 @@ function MoutingPanelItem() {
                 </M.MoutingPanelCard>
               </M.MoutingPanelListCard>
 
-              <ButtonEnableVideo text={'Fluxos, conectores e conexões'} />
+              <ButtonEnableVideo
+                text={'Fluxos, conectores e conexões'}
+                url={'https://www.youtube.com/embed/0AamXQvrZDg'}
+              />
 
             </C.Row>
           </C.ListItem>
 
-          <C.ListItem>
+          <C.ListItem id='zoom-faq'>
             <C.Title4>Zoom e Faq</C.Title4>
 
             <C.Row
@@ -178,10 +185,14 @@ function MoutingPanelItem() {
               </C.ImageContainer>
             </C.Row>
 
-            <ButtonEnableVideo text={'Zoom e FAQ'} />
+            <ButtonEnableVideo
+              text={'Zoom e FAQ'}
+              url={'https://www.youtube.com/embed/-8JV-SIpr50'}
+            />
+
           </C.ListItem>
 
-          <C.ListItem>
+          <C.ListItem id='movement'>
             <C.Row gap='12'>
               <C.Title4>Movimentação</C.Title4>
               <C.Paragraph size='14'>
@@ -218,7 +229,10 @@ function MoutingPanelItem() {
                 </C.ImageContainer>
               </M.MovimentationContainer>
 
-              <ButtonEnableVideo text={'Movimentação'} />
+              <ButtonEnableVideo
+                text={'Movimentação'}
+                url={'https://www.youtube.com/embed/EEG7heLEqR8'}
+              />
 
             </C.Row>
           </C.ListItem>

@@ -1,52 +1,48 @@
 import ButtonEnableVideo from '@/components/shared/ButtonEnableVideo';
+import IframeVideoTutorial from '@/components/shared/IframeVideoTutorial';
 
 import * as I from "./styles";
-import { Paragraph, Row, Title } from '@/styles/common';
+import * as C from '@/styles/common';
 
 function IntroSection() {
 
   return (
     <I.IntroContainer>
       <I.IntroHeader>
-        <Title
+        <C.Title
           id="home"
           size='48'
         >
           Bem-vindo ao manual da plataforma microdigo!
-        </Title>
+        </C.Title>
       </I.IntroHeader>
 
       <I.IntroContent>
-        <Row
+        <C.Row
           gap='12'
         >
-          <Paragraph size='16'>
+          <C.Paragraph size='16'>
             {`Esta página fornecerá uma introdução aos principais conceitos e funcionalidades existentes dentro da plataforma.
                         Se você ainda não utilizou a plataforma, recomendamos que efetue a leitura do manual antes de utilizá-la.`}
-          </Paragraph>
+          </C.Paragraph>
 
-          <Paragraph size='16'>Recomendamos também que para melhor utilizar a plataforma, esteja em uma conexão de internet estável e utilize os navegadores <strong>Google Chrome</strong>, <strong>Microsoft Edge</strong> ou <strong>Opera</strong>.</ Paragraph>
-        </Row>
-        <I.YouWillLearnContainer>
-          <h2>Você vai aprender</h2>
-          <ul>
-            <li>O que é o elemento Cabeçalho</li>
-            <li>O que é a Barra Lateral</li>
-            <li>O que são componentes</li>
-            <li>Quais são os tipos de componentes existentes</li>
-            <li>O que é o Painel de montagem</li>
-            <li>O que são fluxos, conectores e conexões</li>
-            <li>Como utilizar o zoom e faq</li>
-            <li>Como adicionar componentes ao painel de montagem</li>
-            <li>Como criar conexões</li>
-            <li>Como excluir conexões e componentes</li>
-            <li>Como criar fluxos</li>
-            <li>Como manusear fluxos criados</li>
-          </ul>
-        </I.YouWillLearnContainer>
+          <C.Paragraph size='16'>Recomendamos também que para melhor utilizar a plataforma, esteja em uma conexão de internet estável e utilize os navegadores <strong>Google Chrome</strong>, <strong>Microsoft Edge</strong> ou <strong>Opera</strong>.</ C.Paragraph>
+
+        </C.Row>
+
+        <C.IframeContainer>
+          <IframeVideoTutorial
+            url={"https://www.youtube.com/embed/ryw8GgcwTj8"}
+            initialWidth={'100%'}
+            initialHeight={'600px'}
+          />
+        </C.IframeContainer>
       </I.IntroContent>
 
-      <ButtonEnableVideo text={'Introdução'} />
+      <ButtonEnableVideo
+        text={'Manual completo'}
+        url='https://www.youtube.com/embed/7Oa2LK9CFyc'
+      />
 
     </I.IntroContainer>
   )

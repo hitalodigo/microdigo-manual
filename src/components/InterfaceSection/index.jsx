@@ -10,13 +10,13 @@ const InterfaceSection = () => {
   return (
     <I.InterfaceSectionContainer>
 
-      <C.Title2 >Interface</C.Title2>
+      <C.Title2 id='interface'>Interface</C.Title2>
 
       <I.InterfaceSectionContent>
 
         <C.IframeContainer>
           <IframeVideoTutorial
-            url={"https://www.youtube.com/embed/KwnIp1YjPz0"}
+            url={"https://www.youtube.com/embed/w4IGj9vpDcI"}
             initialWidth={'100%'}
             initialHeight={'600px'}
           />

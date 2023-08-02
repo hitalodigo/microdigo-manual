@@ -9,7 +9,11 @@ import * as AC from './styles';
 const AddComponentsSection = () => {
 
   return (
-    <C.ListItem lastChildMarginTop='64'>
+    <C.ListItem
+      lastChildMarginTop='64'
+      id='adding-components'
+    >
+
       <C.Title3>Adicionando componentes ao painel de montagem</C.Title3>
       <C.Row>
         <AC.AddComponentsContainer>
