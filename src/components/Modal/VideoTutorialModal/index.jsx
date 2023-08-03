@@ -35,6 +35,7 @@ const VideoTutorialModal = ({ contentData }) => {
           width='100%'
           height='460px'
           onLoad={handleLoadIframe}
+          title={`Vídeo tutorial - ${title}`}
         ></iframe>
       </>
 

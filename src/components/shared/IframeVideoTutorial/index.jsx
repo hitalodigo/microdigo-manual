@@ -4,7 +4,7 @@ import { SpinnerLoader } from '@/components/shared/SpinnerLoader';
 
 import * as I from './styles';
 
-const IframeVideoTutorial = ({ url, initialWidth, initialHeight }) => {
+const IframeVideoTutorial = ({ url, initialWidth, initialHeight, ...rest }) => {
   const [isLoading, setIsLoading] = useState(true);
 
   const handleLoadIframe = () => {
@@ -24,6 +24,7 @@ const IframeVideoTutorial = ({ url, initialWidth, initialHeight }) => {
         width={initialWidth}
         height={initialHeight}
         onLoad={handleLoadIframe}
+        {...rest}
       ></I.Container>
 
     </>

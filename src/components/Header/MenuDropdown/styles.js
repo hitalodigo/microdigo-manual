@@ -9,6 +9,7 @@ export const TitleMenu = styled.span`
   width: 100%;
   height: 6rem;
   font-size: 1.6rem;
+  font-weight: bold;
   white-space: nowrap;
   color: var(--white);
 

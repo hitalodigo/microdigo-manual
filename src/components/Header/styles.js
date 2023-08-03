@@ -84,6 +84,7 @@ export const MenuLink = styled.a`
   align-items: center;
   height: 6rem;
   font-size: 1.6rem;
+  font-weight: bold;
   white-space: nowrap;
   color: var(--white);
 

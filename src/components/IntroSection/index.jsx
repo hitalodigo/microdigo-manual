@@ -35,6 +35,7 @@ function IntroSection() {
             url={"https://www.youtube.com/embed/ryw8GgcwTj8"}
             initialWidth={'100%'}
             initialHeight={'600px'}
+            title='Vídeo de introdução a plataforma'
           />
         </C.IframeContainer>
       </I.IntroContent>

@@ -19,6 +19,7 @@ const InterfaceSection = () => {
             url={"https://www.youtube.com/embed/w4IGj9vpDcI"}
             initialWidth={'100%'}
             initialHeight={'600px'}
+            title='Vídeo de introdução a seção de interface'
           />
         </C.IframeContainer>
 

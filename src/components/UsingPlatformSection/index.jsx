@@ -23,6 +23,7 @@ function UsingPlatformSection() {
             url={"https://www.youtube.com/embed/8SpApaM97gw"}
             initialWidth={'100%'}
             initialHeight={'600px'}
+            title='Vídeo de introdução a seção usando a plataforma'
           />
         </C.IframeContainer>
 
