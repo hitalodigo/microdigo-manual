@@ -11,7 +11,7 @@ import * as U from "./styles";
 function UsingPlatformSection() {
 
   return (
-    <U.UsingPlatformContainer id='using-platform'>
+    <U.UsingPlatformContainer id='usando_plataforma_microdigo'>
       <C.Title2>
         Usando a plataforma microdigo
       </C.Title2>

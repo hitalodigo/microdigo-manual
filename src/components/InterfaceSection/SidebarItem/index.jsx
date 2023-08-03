@@ -12,7 +12,7 @@ import * as S from "./styles";
 
 function SidebarItem() {
   return (
-    <S.SidebarContainer id='sidebar'>
+    <S.SidebarContainer id='barra_lateral'>
       <S.SidebarHeader>
         <C.Title3
           size='32'
@@ -73,7 +73,7 @@ function SidebarItem() {
 
         </C.Row>
 
-        <C.Row id='components-type'>
+        <C.Row id='tipos_de_componentes'>
           <S.ButtonDescriptionContainer>
             <S.ButtonDescriptionItem
               className='entry'

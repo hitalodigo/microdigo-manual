@@ -12,7 +12,7 @@ const DeleteConnectionsSections = () => {
   return (
     <C.ListItem
       lastChildMarginTop='64'
-      id='delete-connections'
+      id='excluindo_conexoes_componentes'
     >
 
       <C.Title3>Excluindo conexões e componentes</C.Title3>

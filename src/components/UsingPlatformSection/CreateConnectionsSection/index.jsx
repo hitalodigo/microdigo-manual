@@ -11,7 +11,7 @@ const CreateConnectionsSection = () => {
   return (
     <C.ListItem
       lastChildMarginTop='64'
-      id='creation-connections'
+      id='criando_conexoes'
     >
       <C.Title3>Criando conexões</C.Title3>
       <C.Row

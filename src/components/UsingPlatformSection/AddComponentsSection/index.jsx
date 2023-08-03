@@ -11,7 +11,7 @@ const AddComponentsSection = () => {
   return (
     <C.ListItem
       lastChildMarginTop='64'
-      id='adding-components'
+      id='adicionando_componentes_ao_painel_montagem'
     >
 
       <C.Title3>Adicionando componentes ao painel de montagem</C.Title3>

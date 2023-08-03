@@ -16,7 +16,7 @@ import * as M from "./styles";
 function MoutingPanelItem() {
 
   return (
-    <M.MoutingPanelContainer id='mouting-panel'>
+    <M.MoutingPanelContainer id='painel_de_montagem'>
       <M.MoutingPanelHeader>
         <C.Title3>Painel de montagem</C.Title3>
       </M.MoutingPanelHeader>
@@ -45,7 +45,7 @@ function MoutingPanelItem() {
         </C.Row>
 
         <C.OrderList gap='80'>
-          <C.ListItem id='flows-connectors-connections'>
+          <C.ListItem id='fluxos_conectores_conexoes'>
             <C.Row
               gap='24'
 
@@ -99,7 +99,7 @@ function MoutingPanelItem() {
             </C.Row>
           </C.ListItem>
 
-          <C.ListItem id='zoom-faq'>
+          <C.ListItem id='zoom_faq'>
             <C.Title4>Zoom e Faq</C.Title4>
 
             <C.Row
@@ -192,7 +192,7 @@ function MoutingPanelItem() {
 
           </C.ListItem>
 
-          <C.ListItem id='movement'>
+          <C.ListItem id='movimentacao'>
             <C.Row gap='12'>
               <C.Title4>Movimentação</C.Title4>
               <C.Paragraph size='14'>

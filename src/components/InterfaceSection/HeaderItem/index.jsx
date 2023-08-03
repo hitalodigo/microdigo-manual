@@ -12,7 +12,7 @@ function HeaderItem() {
 
       <Header>
         <C.Title3
-          id='header'
+          id='cabecalho'
         >
           Cabeçalho
         </C.Title3>

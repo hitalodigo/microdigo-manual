@@ -5,57 +5,57 @@ export const interfaceAncors = [
   },
   {
     text: 'Cabeçalho',
-    ancor: '#header'
+    ancor: '#cabecalho'
   },
   {
     text: 'Barra lateral',
-    ancor: '#sidebar'
+    ancor: '#barra_lateral'
   },
   {
     text: 'Tipos de componentes',
-    ancor: '#components-type'
+    ancor: '#tipos_de_componentes'
   },
   {
     text: 'Painel de montagem',
-    ancor: '#mouting-panel'
+    ancor: '#painel_de_montagem'
   },
   {
     text: 'Fluxos, conectores e conexões',
-    ancor: '#flows-connectors-connections'
+    ancor: '#fluxos_conectores_conexoes'
   },
   {
     text: 'Zoom e faq',
-    ancor: '#zoom-faq'
+    ancor: '#zoom_faq'
   },
   {
     text: 'Movimentação',
-    ancor: '#movement'
+    ancor: '#movimentacao'
   },
 ];
 
 export const usingPlatformAncors = [
   {
     text: 'Introdução',
-    ancor: '#using-platform'
+    ancor: '#usando_plataforma_microdigo'
   },
   {
     text: 'Adicionando componentes',
-    ancor: '#adding-components'
+    ancor: '#adicionando_componentes_ao_painel_montagem'
   },
   {
     text: 'Criando conexões',
-    ancor: '#creation-connections'
+    ancor: '#criando_conexoes'
   },
   {
     text: 'Deletando conexões e componentes',
-    ancor: '#delete-connections'
+    ancor: '#excluindo_conexoes_componentes'
   },
   {
     text: 'Criando fluxos',
-    ancor: '#create-flows'
+    ancor: '#criando_fluxos'
   },
   {
     text: 'Manuseando fluxos criados',
-    ancor: '#movement-flows'
+    ancor: '#manuseando_fluxos_criados'
   },
 ];

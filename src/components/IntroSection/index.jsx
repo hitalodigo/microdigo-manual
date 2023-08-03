@@ -10,7 +10,7 @@ function IntroSection() {
     <I.IntroContainer>
       <I.IntroHeader>
         <C.Title
-          id="home"
+          id="introducao"
           size='48'
         >
           Bem-vindo ao manual da plataforma microdigo!
