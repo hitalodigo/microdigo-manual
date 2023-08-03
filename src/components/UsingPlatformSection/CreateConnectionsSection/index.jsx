@@ -67,7 +67,10 @@ const CreateConnectionsSection = () => {
 
       </C.Row>
 
-      <ButtonEnableVideo text={'Criando conexões'} />
+      <ButtonEnableVideo
+        text={'Criando conexões'}
+        url='https://www.youtube.com/embed/Gmd4mjHPp-8'
+      />
     </C.ListItem>
   );
 };

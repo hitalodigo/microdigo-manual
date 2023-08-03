@@ -57,7 +57,10 @@ const CreateFlowsSection = () => {
           </C.Column>
         </CF.CreateFlowContainer>
 
-        <ButtonEnableVideo text={'Criando fluxos'} />
+        <ButtonEnableVideo
+          text={'Criando fluxos'}
+          url='https://www.youtube.com/embed/Om96P9YDypM'
+        />
 
       </C.Row>
     </C.ListItem>

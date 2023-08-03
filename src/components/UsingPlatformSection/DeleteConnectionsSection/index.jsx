@@ -88,7 +88,10 @@ const DeleteConnectionsSections = () => {
 
       </C.Row>
 
-      <ButtonEnableVideo text={'Excluindo componentes'} />
+      <ButtonEnableVideo
+        text={'Excluindo componentes'}
+        url='https://www.youtube.com/embed/KimY1VBYCRM'
+      />
 
     </C.ListItem>
   );

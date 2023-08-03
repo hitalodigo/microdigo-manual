@@ -49,7 +49,10 @@ const AddComponentsSection = () => {
           </AC.AddComponentsCard>
         </AC.AddComponentsContainer>
 
-        <ButtonEnableVideo text={'Adicionando componentes'} />
+        <ButtonEnableVideo
+          text={'Adicionando componentes'}
+          url='https://www.youtube.com/embed/DcHXYJX7kjY'
+        />
       </C.Row>
     </C.ListItem>
   );
