@@ -6,9 +6,10 @@ const Container = styled.main`
   height: 100vh;
   position: relative;
   display: flex;
+
 `
 
-const Content = styled.article`
+const Content = styled.div`
  position: relative;
   width: 100%;
   display: flex;
@@ -16,7 +17,7 @@ const Content = styled.article`
   gap: 8rem;
   margin-top: 6rem;
   padding: 2.4rem 12rem 6.4rem 12rem ;
-  transition: all 0.2s ease-in-out;
+  /* transition: all 0.2s ease; */
   scroll-behavior: smooth;
   overflow-y: auto;
   overflow-x: hidden;

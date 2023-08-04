@@ -1,3 +1,6 @@
+import { useEffect, useRef } from 'react';
+
+import { useAnchor } from '@/hooks/useAnchors';
 import HeaderItem from "./HeaderItem";
 import MoutingPanelItem from "./MoutingPainelItem";
 import SidebarItem from "./SidebarItem";
@@ -7,10 +10,28 @@ import * as C from '@/styles/common';
 import * as I from './styles';
 
 const InterfaceSection = () => {
+
+  const { registerSection } = useAnchor();
+
+  const interfaceSectionRef = useRef(null);
+
+  useEffect(() => {
+
+    registerSection({
+      name: 'interface',
+      ref: interfaceSectionRef.current
+    })
+  }, [interfaceSectionRef.current]);
+
   return (
     <I.InterfaceSectionContainer>
 
-      <C.Title2 id='interface'>Interface</C.Title2>
+      <C.Title2
+        id='interface'
+        ref={interfaceSectionRef}
+      >
+        Interface
+      </C.Title2>
 
       <I.InterfaceSectionContent>
 

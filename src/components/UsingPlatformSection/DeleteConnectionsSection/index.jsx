@@ -1,3 +1,6 @@
+import { useEffect, useRef } from 'react';
+
+import { useAnchor } from '@/hooks/useAnchors';
 import imgExcluindoConexao1 from '@/assets/images/usando-plataforma/excluindo-conexao-ex1.png';
 import imgExcluindoConexao2 from '@/assets/images/usando-plataforma/excluindo-conexao-ex2.png';
 import imgExcluindoConexao3 from '@/assets/images/usando-plataforma/excluindo-conexao-ex3.png';
@@ -9,10 +12,24 @@ import * as C from "@/styles/common";
 import * as DC from "./styles";
 
 const DeleteConnectionsSections = () => {
+
+  const { registerSection } = useAnchor();
+
+  const deleteConnsComponentsSectionRef = useRef(null);
+
+  useEffect(() => {
+
+    registerSection({
+      name: 'excluindo_conexoes_componentes',
+      ref: deleteConnsComponentsSectionRef.current
+    })
+  }, [deleteConnsComponentsSectionRef.current]);
+
   return (
     <C.ListItem
       lastChildMarginTop='64'
       id='excluindo_conexoes_componentes'
+      ref={deleteConnsComponentsSectionRef}
     >
 
       <C.Title3>Excluindo conexões e componentes</C.Title3>

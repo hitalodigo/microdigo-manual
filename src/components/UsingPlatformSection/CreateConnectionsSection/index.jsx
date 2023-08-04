@@ -1,3 +1,6 @@
+import { useEffect, useRef } from 'react';
+
+import { useAnchor } from '@/hooks/useAnchors';
 import imgCriandoConexao1 from '@/assets/images/usando-plataforma/criando-conexao-ex1.png';
 import imgCriandoConexao2 from '@/assets/images/usando-plataforma/criando-conexao-ex2.png';
 import imgCriandoConexao3 from '@/assets/images/usando-plataforma/criando-conexao-ex3.png';
@@ -8,10 +11,24 @@ import * as C from "@/styles/common";
 import * as CC from './styles';
 
 const CreateConnectionsSection = () => {
+
+  const { registerSection } = useAnchor();
+
+  const creacteConnectionsSectionRef = useRef(null);
+
+  useEffect(() => {
+
+    registerSection({
+      name: 'criando_conexoes',
+      ref: creacteConnectionsSectionRef.current
+    })
+  }, [creacteConnectionsSectionRef.current]);
+
   return (
     <C.ListItem
       lastChildMarginTop='64'
       id='criando_conexoes'
+      ref={creacteConnectionsSectionRef}
     >
       <C.Title3>Criando conexões</C.Title3>
       <C.Row

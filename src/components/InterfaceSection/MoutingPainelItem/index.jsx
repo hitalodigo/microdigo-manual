@@ -13,10 +13,49 @@ import ButtonEnableVideo from '@/components/shared/ButtonEnableVideo';
 import * as C from "@/styles/common";
 import * as M from "./styles";
 
+import { useAnchor } from '@/hooks/useAnchors';
+import { useRef, useEffect, useState } from 'react';
+
 function MoutingPanelItem() {
 
+  const { registerSection } = useAnchor();
+
+  const [sectionRefs] = useState({
+    moutingPanel: {
+      name: 'painel_de_montagem',
+      ref: useRef(null)
+    },
+    flowsConnectorsConnections: {
+      name: 'fluxos_conectores_conexoes',
+      ref: useRef(null)
+    },
+    zoomFaq: {
+      name: 'zoom_faq',
+      ref: useRef(null)
+    },
+    movement: {
+      name: 'movimentacao',
+      ref: useRef(null)
+    }
+  });
+
+  useEffect(() => {
+    const listRefs = Object.values(sectionRefs);
+
+    listRefs.forEach(element => {
+      registerSection({
+        name: element.name,
+        ref: element.ref.current
+      })
+    })
+
+  }, [sectionRefs]);
+
   return (
-    <M.MoutingPanelContainer id='painel_de_montagem'>
+    <M.MoutingPanelContainer
+      id='painel_de_montagem'
+      ref={sectionRefs.moutingPanel.ref}
+    >
       <M.MoutingPanelHeader>
         <C.Title3>Painel de montagem</C.Title3>
       </M.MoutingPanelHeader>
@@ -45,7 +84,10 @@ function MoutingPanelItem() {
         </C.Row>
 
         <C.OrderList gap='80'>
-          <C.ListItem id='fluxos_conectores_conexoes'>
+          <C.ListItem
+            id='fluxos_conectores_conexoes'
+            ref={sectionRefs.flowsConnectorsConnections.ref}
+          >
             <C.Row
               gap='24'
 
@@ -99,7 +141,10 @@ function MoutingPanelItem() {
             </C.Row>
           </C.ListItem>
 
-          <C.ListItem id='zoom_faq'>
+          <C.ListItem
+            id='zoom_faq'
+            ref={sectionRefs.zoomFaq.ref}
+          >
             <C.Title4>Zoom e Faq</C.Title4>
 
             <C.Row
@@ -192,7 +237,10 @@ function MoutingPanelItem() {
 
           </C.ListItem>
 
-          <C.ListItem id='movimentacao'>
+          <C.ListItem
+            id='movimentacao'
+            ref={sectionRefs.movement.ref}
+          >
             <C.Row gap='12'>
               <C.Title4>Movimentação</C.Title4>
               <C.Paragraph size='14'>

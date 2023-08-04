@@ -1,3 +1,6 @@
+import { useEffect, useRef } from 'react';
+
+import { useAnchor } from '@/hooks/useAnchors';
 import ButtonEnableVideo from '@/components/shared/ButtonEnableVideo';
 import IframeVideoTutorial from '@/components/shared/IframeVideoTutorial';
 
@@ -6,12 +9,25 @@ import * as C from '@/styles/common';
 
 function IntroSection() {
 
+  const { registerSection } = useAnchor();
+
+  const introSectionRef = useRef(null);
+
+  useEffect(() => {
+
+    registerSection({
+      name: 'introducao',
+      ref: introSectionRef.current
+    })
+  }, [introSectionRef.current]);
+
   return (
     <I.IntroContainer>
       <I.IntroHeader>
         <C.Title
           id="introducao"
           size='48'
+          ref={introSectionRef}
         >
           Bem-vindo ao manual da plataforma microdigo!
         </C.Title>

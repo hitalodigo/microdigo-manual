@@ -1,3 +1,6 @@
+import { useEffect, useRef } from 'react';
+
+import { useAnchor } from '@/hooks/useAnchors';
 import imgCriandoFluxos1 from '@/assets/images/usando-plataforma/criando-fluxo-ex1.png';
 import imgCriandoFluxos2 from '@/assets/images/usando-plataforma/criando-fluxo-ex2.png';
 
@@ -7,8 +10,24 @@ import * as C from "@/styles/common";
 import * as CF from "./styles";
 
 const CreateFlowsSection = () => {
+
+  const { registerSection } = useAnchor();
+
+  const creacteFlowsSectionRef = useRef(null);
+
+  useEffect(() => {
+
+    registerSection({
+      name: 'criando_fluxos',
+      ref: creacteFlowsSectionRef.current
+    })
+  }, [creacteFlowsSectionRef.current]);
+
   return (
-    <C.ListItem id='criando_fluxos'>
+    <C.ListItem
+      id='criando_fluxos'
+      ref={creacteFlowsSectionRef}
+    >
 
       <C.Title3 >Criando fluxos</C.Title3>
       <C.Row

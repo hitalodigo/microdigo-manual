@@ -1,3 +1,6 @@
+import { useEffect, useRef } from 'react';
+
+import { useAnchor } from '@/hooks/useAnchors';
 import imgMovendoFluxo1 from '@/assets/images/usando-plataforma/movendo-fluxo-ex1.png';
 import imgMovendoFluxo2 from '@/assets/images/usando-plataforma/movendo-fluxo-ex2.png';
 import imgMovendoFluxo3 from '@/assets/images/usando-plataforma/movendo-fluxo-ex3.png';
@@ -10,8 +13,23 @@ import * as H from "./styles";
 
 const MovementFlowsSection = () => {
 
+  const { registerSection } = useAnchor();
+
+  const movementSectionRef = useRef(null);
+
+  useEffect(() => {
+
+    registerSection({
+      name: 'manuseando_fluxos_criados',
+      ref: movementSectionRef.current
+    })
+  }, [movementSectionRef.current]);
+
   return (
-    <C.ListItem id='manuseando_fluxos_criados'>
+    <C.ListItem
+      id='manuseando_fluxos_criados'
+      ref={movementSectionRef}
+    >
       <C.Title3>Manuseando fluxos criados</C.Title3>
       <C.Row
         gap='32'

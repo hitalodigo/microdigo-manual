@@ -18,7 +18,6 @@ function Header() {
   });
 
   const handleDisableMenu = () => {
-    console.log('CLICANDO NO MENU');
     setIsActive(false)
   };
 
@@ -68,8 +67,7 @@ function Header() {
           onClick={() => handleActiveMenu('')}
         >
           <H.MenuLink
-            href="#home"
-            onClick={handleDisableMenu}
+            href="#introducao"
           >
             Início
           </H.MenuLink>

@@ -1,24 +1,39 @@
+import { useRef, useEffect } from 'react';
+
 import imgHeader from '@/assets/images/cabecalho/example-cabecalho.png';
-
-import * as C from "@/styles/common";
 import ButtonEnableVideo from '@/components/shared/ButtonEnableVideo';
+import { useAnchor } from '@/hooks/useAnchors';
 
-import { HeaderContainer, HeaderContent, Header } from './styles'
+import * as H from './styles'
+import * as C from "@/styles/common";
 
 function HeaderItem() {
 
-  return (
-    <HeaderContainer>
+  const { registerSection } = useAnchor();
 
-      <Header>
+  const headerSectionRef = useRef(null);
+
+  useEffect(() => {
+
+    registerSection({
+      name: 'cabecalho',
+      ref: headerSectionRef.current
+    })
+  }, [headerSectionRef.current]);
+
+  return (
+    <H.HeaderContainer>
+
+      <H.Header>
         <C.Title3
           id='cabecalho'
+          ref={headerSectionRef}
         >
           Cabeçalho
         </C.Title3>
-      </Header>
+      </H.Header>
 
-      <HeaderContent>
+      <H.HeaderContent>
         <C.Row
           gap='24'
         >
@@ -36,13 +51,13 @@ function HeaderItem() {
         </C.Row>
 
 
-      </HeaderContent>
+      </H.HeaderContent>
 
       <ButtonEnableVideo
         text={'Cabeçalho'}
         url={'https://www.youtube.com/embed/q5ZO5ndul3A'}
       />
-    </HeaderContainer>
+    </H.HeaderContainer>
   )
 }
 

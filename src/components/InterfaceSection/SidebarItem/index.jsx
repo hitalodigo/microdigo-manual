@@ -10,12 +10,43 @@ import ButtonEnableVideo from '@/components/shared/ButtonEnableVideo';
 import * as C from "@/styles/common";
 import * as S from "./styles";
 
+import { useAnchor } from '@/hooks/useAnchors';
+import { useRef, useEffect, useState } from 'react';
+
+
 function SidebarItem() {
+
+  const { registerSection } = useAnchor();
+  const [sectionRefs] = useState({
+    sidebar: {
+      name: 'barra_lateral',
+      ref: useRef(null)
+    },
+    componentsType: {
+      name: 'tipos_de_componentes',
+      ref: useRef(null)
+    }
+  });
+
+  useEffect(() => {
+    const listRefs = Object.values(sectionRefs);
+
+    listRefs.forEach(element => {
+      registerSection({
+        name: element.name,
+        ref: element.ref.current
+      })
+    })
+
+  }, [sectionRefs]);
+
   return (
-    <S.SidebarContainer id='barra_lateral'>
+    <S.SidebarContainer >
       <S.SidebarHeader>
         <C.Title3
           size='32'
+          id='barra_lateral'
+          ref={sectionRefs.sidebar.ref}
         >
           Barra lateral
         </C.Title3>
@@ -73,7 +104,10 @@ function SidebarItem() {
 
         </C.Row>
 
-        <C.Row id='tipos_de_componentes'>
+        <C.Row
+          id='tipos_de_componentes'
+          ref={sectionRefs.componentsType.ref}
+        >
           <S.ButtonDescriptionContainer>
             <S.ButtonDescriptionItem
               className='entry'

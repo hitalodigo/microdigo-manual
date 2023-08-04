@@ -1,3 +1,6 @@
+import { useEffect, useRef } from 'react';
+
+import { useAnchor } from '@/hooks/useAnchors';
 import AddComponentsSection from './AddComponentsSection';
 import CreateConnectionsSection from './CreateConnectionsSection';
 import DeleteConnectionsSections from './DeleteConnectionsSection';
@@ -10,8 +13,23 @@ import * as U from "./styles";
 
 function UsingPlatformSection() {
 
+  const { registerSection } = useAnchor();
+
+  const usingPlatformSectionRef = useRef(null);
+
+  useEffect(() => {
+
+    registerSection({
+      name: 'usando_plataforma_microdigo',
+      ref: usingPlatformSectionRef.current
+    })
+  }, [usingPlatformSectionRef.current]);
+
   return (
-    <U.UsingPlatformContainer id='usando_plataforma_microdigo'>
+    <U.UsingPlatformContainer
+      id='usando_plataforma_microdigo'
+      ref={usingPlatformSectionRef}
+    >
       <C.Title2>
         Usando a plataforma microdigo
       </C.Title2>

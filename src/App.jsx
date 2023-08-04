@@ -5,6 +5,7 @@ import { ModalProvider } from '@/contexts/ModalContext';
 
 import GlobalStyles from './styles/global';
 import Home from './pages/Home';
+import { AnchorProvider } from './contexts/AnchorsContext';
 
 
 Modal.setAppElement('#root');
@@ -15,9 +16,12 @@ function App() {
   return (
     <ModalProvider>
 
-      <GlobalStyles />
+      <AnchorProvider>
 
-      <Home />
+        <GlobalStyles />
+        <Home />
+
+      </AnchorProvider>
     </ModalProvider>
   )
 }

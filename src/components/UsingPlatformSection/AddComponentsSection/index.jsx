@@ -1,3 +1,6 @@
+import { useEffect, useRef } from 'react';
+
+import { useAnchor } from '@/hooks/useAnchors';
 import imgAddComponentesEx1 from '@/assets/images/usando-plataforma/add-componentes-ex1.png';
 import imgAddComponentesEx2 from '@/assets/images/usando-plataforma/add-componentes-ex2.png';
 
@@ -8,10 +11,23 @@ import * as AC from './styles';
 
 const AddComponentsSection = () => {
 
+  const { registerSection } = useAnchor();
+
+  const addComponentsSectionRef = useRef(null);
+
+  useEffect(() => {
+
+    registerSection({
+      name: 'adicionando_componentes_ao_painel_montagem',
+      ref: addComponentsSectionRef.current
+    })
+  }, [addComponentsSectionRef.current]);
+
   return (
     <C.ListItem
       lastChildMarginTop='64'
       id='adicionando_componentes_ao_painel_montagem'
+      ref={addComponentsSectionRef}
     >
 
       <C.Title3>Adicionando componentes ao painel de montagem</C.Title3>
